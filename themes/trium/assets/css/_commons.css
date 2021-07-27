@@ -16,15 +16,28 @@ a, a:hover, a:focus, button:hover, button:focus{
 }
 
 body {
-    background: #f8f8f8;
-    color: #000000;
-    font-size: 18px;
-    line-height: 24px;
-     font-family: 'Candara';
+    background: #ffffff;
+    color: #777F84;
+    font-size: 16px;
+    line-height: 25px;
+    font-family: 'Lato', sans-serif;
+    /*font-family: 'Oswald', sans-serif;*/
 }
 p{
-	line-height: 1.2;
+	line-height: 1.5;
 	margin-bottom: 15px;
+}
+
+a{
+	display: inline-block;
+	vertical-align: baseline;
+	color: #1A7ABE;
+}
+a:hover{
+	color: #162B39;
+}
+strong,b{
+	font-weight: 700;
 }
 
 input[type=text],
@@ -38,7 +51,7 @@ textarea{
 }
 ::selection {
   color: #fff;
-  background: #512C36;
+  background: #1A7ABE;
 }
 /*-- app gap use pattern --*/
 /*data-xxs = 575
@@ -106,7 +119,7 @@ Containers
 
 }
 .container{
-	max-width: 1200px;
+	max-width: 1315px;
 	width: 100%;
 }
 .container-md{
@@ -280,6 +293,38 @@ body.login-register.hide-account-title .select2-container--open .select2-dropdow
 }
 
 
+/*common button*/
+.fl-transparent-btn{
+	display: inline-block;
+	vertical-align: baseline;
+	font-size: 16px;
+	line-height: 1;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 600;
+	padding: 15px 15px;
+	border: 2px solid #fff;
+	background: transparent;
+	color: #fff;
+	min-width: 200px;
+}
+
+.fl-blue-btn{
+	display: inline-block;
+	vertical-align: baseline;
+	font-size: 16px;
+	line-height: 1;
+	text-align: center;
+	text-transform: uppercase;
+	font-family: 'Oswald', sans-serif;
+	font-weight: 600;
+	padding: 15px 15px;
+	border: 2px solid #1A7ABE;
+	background: #1A7ABE;
+	color: #fff;
+	min-width: 210px;
+}
 
 /*slider break fix*/
 

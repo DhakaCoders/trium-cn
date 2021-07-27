@@ -225,6 +225,32 @@ google.maps.event.addDomListener(window, 'load', initialize);
   }, false);
 })();
 
+
+
+
+  /*start of Rannojit*/
+
+
+
+  /*start of Noyon*/
+
+
+
+  /*start of Sabbir*/
+
+
+
+  /*start of Kashob*/
+  
+
+
+  /*start of Niaz*/
+  
+
+
+  /*start of Shariful*/
+
+
     new WOW().init();
 
 })(jQuery);
