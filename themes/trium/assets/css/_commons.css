@@ -20,12 +20,13 @@ body {
     color: #777F84;
     font-size: 16px;
     line-height: 25px;
+    font-weight: 400;
     font-family: 'Lato', sans-serif;
     /*font-family: 'Oswald', sans-serif;*/
 }
 p{
 	line-height: 1.5;
-	margin-bottom: 15px;
+	margin-bottom: 25px;
 }
 
 a{
