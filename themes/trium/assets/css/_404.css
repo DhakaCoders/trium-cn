@@ -34,10 +34,10 @@
     padding-top: 11px;
     padding-bottom: 9px;
 }
-.page-404-lft-dec .default-page-con ul, ul{
+.page-404-lft-dec .default-page-con ul{
 	padding-bottom: 8px!important;
 }
-.page-404-lft-dec .default-page-con ul li, ul li{
+.page-404-lft-dec .default-page-con ul li{
 	padding: 2px 0 18px 22px!important;
 	text-transform: uppercase;
     font-weight: 600;
