@@ -31,8 +31,8 @@
     justify-content: center;
 }
 
-.bedankt-sec .bedankt-page-content-inner .bedankt-links ul li {
-    padding: 13px 66px!important;
+.bedankt-links ul li {
+    padding: 13px 66px;
 }
 .bedankt-links ul li a{
     font-family: Oswald;
