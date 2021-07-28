@@ -20,7 +20,7 @@
 	position: relative;
 }
 .default-page-con {
-	padding-bottom: 65px;
+	padding-bottom: 85px;
 	padding-top: 0;
 }
 
@@ -274,8 +274,7 @@ hr{
 /*table*/
 
 .dfp-tbl-wrap{
-	padding-top: 50px;
-	margin-bottom: 70px;
+	padding-top: 70px;
 }
 
 .dfp-tbl-wrap h6{
