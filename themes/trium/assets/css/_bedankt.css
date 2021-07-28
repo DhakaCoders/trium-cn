@@ -23,16 +23,17 @@
     margin-bottom: 26px;
 }
 .bedankt-links-cntlr {
-    display: flex;
-    justify-content: center;
-    /*margin: 0 -66px;*/
     padding-bottom: 26px;
 }
+.bedankt-links-cntlr ul {
+    display: flex;
+    justify-content: center;
+}
 
-.bedankt-link-item {
+.bedankt-links-cntlr ul li {
     padding: 0 66px;
 }
-.bedankt-link-item a {
+.bedankt-links-cntlr ul li a{
     font-family: Oswald;
     line-height: 3;
     font-weight: 600;
