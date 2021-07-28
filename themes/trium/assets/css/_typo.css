@@ -7,6 +7,8 @@ h1,h2,h3,h4,h5,h6{
 	margin-bottom: 20px;
 	font-family: 'Oswald', sans-serif;
 	font-weight: 600;
+	text-transform: uppercase;
+	color: #162B39;
 }
 h1,.fl-h1{
 	font-size: 48px;
