@@ -1,0 +1,57 @@
+.bedankt-page-content-inner {
+    max-width: 720px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+}
+.bedankt-massage-icon {
+    padding-bottom: 47px;
+}
+.bedankt-massage-icon i {
+    display: inline-block;
+}
+.bedankt-heading{
+    line-height: 1.3;
+    margin-bottom: 0;
+}
+.bedankt-dec p {
+    line-height: 160%;
+    margin-bottom: 26px;
+}
+.bedankt-links-cntlr {
+    display: flex;
+    justify-content: center;
+    /*margin: 0 -66px;*/
+    padding-bottom: 26px;
+}
+
+.bedankt-link-item {
+    padding: 0 66px;
+}
+.bedankt-link-item a {
+    font-family: Oswald;
+    line-height: 3;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+.blue-btn {
+    background: #1A7ABE;
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    font-family: Oswald;
+    text-transform: uppercase;
+    border: 2px solid #1A7ABE;
+    padding: 10px 20px;
+    min-width: 240px;
+    text-align: center;
+    display: inline-block;
+}
+.blue-btn:hover{
+    background: #fff;
+    color: #1A7ABE;
+    border: 2px solid #1A7ABE;
+}
+.bedankt-btn {
+    padding-bottom: 87px;
+}
