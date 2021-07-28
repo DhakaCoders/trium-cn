@@ -57,6 +57,8 @@
 
 .two-grd-des-sec{
 	padding-top: 80px;
+}
+.two-grd-des-sec-inr{
 	padding-bottom: 45px;
 	border-bottom: 1px solid #E4E4E4;
 }
@@ -96,8 +98,23 @@
 }
 
 
-.ood-location a{
+.ood-location,
+.ood-tel,
+.ood-fax{
+	padding-bottom: 20px;
+}
+.ood-location a,
+.ood-tel a,
+.ood-fax a,
+.ood-vat span,
+.ood-tel span,
+.ood-fax span{
 	display: inline-block;
 	vertical-align: baseline;
 	color: #162B39;
+}
+.ood-location a:hover,
+.ood-tel a:hover,
+.ood-fax a:hover{
+	color: #1A7ABE;
 }
