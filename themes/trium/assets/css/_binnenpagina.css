@@ -43,6 +43,7 @@
 	font-weight: 600;
 	margin-bottom: 40px;
 	display: block;
+	text-transform: uppercase;
 }
 
 /*.dfp-promo-module-des p{
@@ -441,15 +442,47 @@ Gallery design
 
 
 
-/*blog details*/
-
-
-
-
 
 
 
 /*referentied details*/
+
+.back-btn{
+	padding-bottom: 20px;
+}
+.back-btn a{
+	display: inline-block;
+	vertical-align: baseline;
+	padding-left: 22px;
+	color: #777F84;
+	font-weight: 700;
+	position: relative;
+}
+.back-btn a i{
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	margin-top: -1px;
+}
+.back-btn a:hover{
+	color: #1A7ABE;
+}
+.back-btn a:hover i{
+	margin-left: 5px;
+}
+/*.back-btn a:hover svg{
+	fill: #000;
+}*/
+
+#referenties-details .dfp-promo-module-title{
+	margin-bottom: 20px;
+}
+#referenties-details .dfp-plate-one-img-bx{
+	margin-bottom: 70px;
+}
 
 /*#referenties-details .dfp-full-img-module{
 	padding-top: 20px;
