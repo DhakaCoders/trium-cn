@@ -432,6 +432,32 @@ hr{
 	padding-bottom: 25px;
 }
 
+.dfp-service-module{
+	padding-top: 30px;
+	padding-bottom: 50px;
+}
+
+.dfp-service-grds{
+	margin-left: -12px;
+	margin-right: -12px;
+}
+.dfp-service-grd-item{
+	float: left;
+	width: 50%;
+	padding-left: 12px;
+	padding-right: 12px;
+	padding-bottom: 25px;
+}
+
+
+#referenties-details .dfp-cta-module-cntlr {
+    margin-bottom: 70px;
+}
+
+#referenties-details.default-page-con {
+    padding-bottom: 30px;
+}
+
 
 
 
@@ -477,85 +503,27 @@ hr{
 	margin-bottom: 70px;
 }
 
-/*#referenties-details .dfp-full-img-module{
-	padding-top: 20px;
-	padding-bottom: 60px;
-}
-#referenties-details .dfp-cta-module{
-	margin-bottom: 65px;
-}
-#referenties-details .default-page-con{
-	padding-bottom: 90px;
-}
 
-#referenties-details .bnr-grd{
-	display: flex;
-	align-items: flex-end;
-	padding-bottom: 60px;
-	border-bottom: 2px solid #EFF4F7;
-	margin-bottom: 60px;
-}
-#referenties-details .bnr-grd-img{
-	width:  32.6848%;
-}
-#referenties-details .bnr-grd-des{
-	width: 67.3151%;
-	padding-left: 100px;
-	padding-bottom: 30px;
-}
-
-#referenties-details .bnr-grd-img i{
-	display: inline-block;
-	vertical-align: baseline;
-}
-#referenties-details .bnr-grd-img i img{
-	border-radius: 100%;
-}
-
-#referenties-details .bnr-grd-des p{
-	font-size: 30px;
-	font-weight: 200;
-	margin-bottom: 15px;
-	line-height: 1.2;
-	font-style: italic;
-}
-
-#referenties-details .dfp-promo-module{
-	margin-top: -200px;
-}
 
 .referenties-detials-related-sec{
-	background: #fafafb;
-	padding-top: 100px;
+	padding-top: 90px;
+	padding-bottom: 70px;
+	background: #F7F7F7;
 }
-.referenties-details-grds{
+.fl-sec-entry-hdr{
+	text-align: center;
+}
+.referenties-detials-related-grds{
 	margin-left: -12px;
 	margin-right: -12px;
 }
-.referenties-details-grds .referentiesDetailsSliderItem{
+.referenties-detials-related-grd-item{
 	float: left;
-	width: 50%;
+	width: 33.3333%;
 	padding-left: 12px;
 	padding-right: 12px;
 	padding-bottom: 25px;
 }
-
-.referntiesDetailsSlider .ref-ov-page-grid-des{
-	text-align: center;
-}
-.refernties-details-related-sec-inr .sec-entry-hdr{
-	padding-bottom: 20px;
-}
-
-.referntiesDetailsSlider .referentiesDetailsSliderItem{
-	display: none;
-}
-.referntiesDetailsSlider .referentiesDetailsSliderItem:first-child{
-	display: block;
-}
-.referntiesDetailsSlider.slick-initialized .referentiesDetailsSliderItem{
-	display: block;
-}*/
 
 
 
