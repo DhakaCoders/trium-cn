@@ -12,25 +12,25 @@
 .cta-module-cntlr p{
 	color:#fff;
 }*/
-.category-brand-sec{
+.service-sec{
     background: #162B39;
     margin-bottom:15px;
 }
-.category-brand-sec-cntlr{
+.service-sec-cntlr{
 	padding-top:70px;
 	padding-bottom:70px;
 	padding-left: 39px;
     padding-right: 39px;
 }
-.category-brand-sec-cntlr ul{
+.service-sec-cntlr ul{
     display: flex;
     margin:0 -15px;
 }
-.category-brand-sec-cntlr ul li{
+.service-sec-cntlr ul li{
     padding: 0 15px;
     width: 25%;
 }
-.cta-brand-grid-item .cta-brand-grid-item-img{
+.service-sec-grid-item .service-sec-grid-item-img{
 	height:600px;
 	display:flex;
 	align-items: center;
@@ -38,16 +38,17 @@
 	position: relative;
 	width:auto;
 }
-.cat-brand-grid-tiem-title{
+.service-sec-grid-item-title{
     font-family: 'Oswald', sans-serif;
     color: #ffff;
     text-align: center;
-    opacity:0;
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
     -ms-transition: all 0.5s;
+    z-index: 2;
+    position: relative;
 }
-.cta-brand-grid-item-img:after{
+.service-sec-grid-item-img:after{
     content: "";
     position: absolute;
     left: 0;
@@ -58,10 +59,8 @@
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
     -ms-transition: all 0.5s;
+    z-index:1;
 }
-.cta-brand-grid-item .cta-brand-grid-item-img:hover:after{
+.service-sec-grid-item .service-sec-grid-item-img:hover:after{
     background: rgba(22, 43, 57, 0);
-}
-.cta-brand-grid-item .cta-brand-grid-item-img:hover .cat-brand-grid-tiem-title{
-	opacity:1;
 }
