@@ -1,9 +1,14 @@
 .block-h1-144{
 	font-size: 144px;
-	margin-bottom: 50px;
+	margin-bottom: 30px;
+	margin-top: -15px;
 }
 .block-page-sub-heading{
-
+	margin-bottom: 22px;
+}
+.page-404-dec-inner p{
+	line-height: 1.6;
+	margin-bottom: 27px;
 }
 .page-404-inner {
     display: flex;
