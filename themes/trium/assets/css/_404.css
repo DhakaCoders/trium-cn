@@ -36,11 +36,19 @@
     padding-top: 11px;
     padding-bottom: 9px;
 }
+<<<<<<< HEAD
 .page-404-lft-dec .default-page-con ul,.page-404-lft-dec ul{
 	padding-bottom: 8px;
 }
 .page-404-lft-dec .default-page-con ul li,.page-404-lft-dec ul li{
 	padding: 2px 0 18px 22px;
+=======
+.page-404-lft-dec .default-page-con ul{
+	padding-bottom: 8px!important;
+}
+.page-404-lft-dec .default-page-con ul li{
+	padding: 2px 0 18px 22px!important;
+>>>>>>> 6ead729d2fa993676a2b9fa411c0203960da5ce3
 	text-transform: uppercase;
     font-weight: 600;
     font-family: Oswald;
