@@ -1,0 +1,23 @@
+.block-h1-144{
+	font-size: 144px;
+	margin-bottom: 50px;
+}
+.block-page-sub-heading{
+
+}
+.page-404-inner {
+    display: flex;
+}
+
+.page-404-lft-dec {
+    width: 51%;
+    padding-top: 132px;
+}
+
+.page-404-rgt-img {
+    width: 49%;
+}
+.page-404-img i{
+	display: inline-block;
+	vertical-align: baseline;
+}
