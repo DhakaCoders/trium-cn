@@ -6,7 +6,7 @@
 .block-page-sub-heading{
 	margin-bottom: 22px;
 }
-.page-404-dec-inner p{
+.page-404-des p{
 	line-height: 1.6;
 	margin-bottom: 27px;
 }
@@ -15,7 +15,7 @@
     flex-wrap: wrap;
 }
 
-.page-404-lft-dec {
+.page-404-lft-des {
     /*width: 42.49%;*/
     width: 41%;
     padding-top: 132px;
@@ -26,20 +26,16 @@
     /*width: 57.51%;*/
     padding-left: 127px;
 }
-.page-404-img i{
-	display: inline-block;
-	vertical-align: baseline;
-}
 .page-404-img{
 	/*padding-left: 107px;
     padding-right: 123px;*/
     padding-top: 11px;
     padding-bottom: 9px;
 }
-.page-404-lft-dec .default-page-con ul,.page-404-lft-dec ul{
+.page-404-des .default-page-con ul,.page-404-des ul{
 	padding-bottom: 8px;
 }
-.page-404-lft-dec .default-page-con ul li,.page-404-lft-dec ul li{
+.page-404-des .default-page-con ul li,.page-404-des ul li{
 	padding: 2px 0 18px 22px;
 	text-transform: uppercase;
     font-weight: 600;
