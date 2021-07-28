@@ -412,6 +412,11 @@ hr{
 	margin-bottom: 90px;
 }
 
+.dfp-grd-module-inr{
+	padding-bottom: 75px;
+	margin-bottom: 80px;
+	border-bottom: 1px solid #E4E4E4;
+}
 .dfp-grd-entry-hdr{
 	text-align: center;
 }
