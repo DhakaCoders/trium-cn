@@ -1,0 +1,14 @@
+.cta-module{
+	background: #1A7ABE;
+}
+.cta-module-cntlr{
+    padding-bottom: 102px;
+    padding-top: 102px;
+    text-align: center;
+}
+.cta-module-title{
+    color: #fff;
+}
+.cta-module-cntlr p{
+	color:#fff;
+}
