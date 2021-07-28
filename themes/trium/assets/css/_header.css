@@ -6,11 +6,10 @@
 }
 .header-inr{
 	display: flex;
-	align-items: center;
 	flex-wrap: wrap;
 }
 .hdr-lft{
-
+	padding-top: 28px;
 }
 .logo{
 
@@ -270,7 +269,7 @@ nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li a {
 
 
 .catagory-menu{
-	padding: 24px 0;
+	padding: 26px 0 6px 0;
 	background: #1A7ABE;
 	position: relative;
 }
@@ -300,11 +299,16 @@ nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li a {
 .catagory-menu-cntlr ul li{
 	position: relative;
 	padding: 0 67px;
+	margin-bottom: 20px;
+	line-height: 1;
 }
 .catagory-menu-cntlr ul li a{
 	font-size: 18px;
 	line-height: 1;
 	color: #FFFFFF;
+}
+.catagory-menu-cntlr ul li a:hover{
+	opacity: 0.8;
 }
 .catagory-menu-cntlr ul li a:after{
 	position: absolute;
