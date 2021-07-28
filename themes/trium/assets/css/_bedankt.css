@@ -16,11 +16,11 @@
     vertical-align: baseline;
 }
 .bedankt-heading{
-    line-height: 1.3;
-    margin-bottom: 0;
+    line-height: 1;
+    margin-bottom: 20px;
 }
 .bedankt-dec p {
-    line-height: 160%;
+    line-height: 1.6;
     margin-bottom: 26px;
 }
 .bedankt-links {
@@ -31,8 +31,8 @@
     justify-content: center;
 }
 
-.bedankt-links ul li {
-    padding: 13px 66px;
+.bedankt-sec .bedankt-page-content-inner .bedankt-links ul li {
+    padding: 13px 66px!important;
 }
 .bedankt-links ul li a{
     font-family: Oswald;

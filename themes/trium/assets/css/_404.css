@@ -1,23 +1,53 @@
 .block-h1-144{
 	font-size: 144px;
-	margin-bottom: 50px;
+	margin-bottom: 30px;
+	margin-top: -15px;
 }
 .block-page-sub-heading{
-
+	margin-bottom: 22px;
+}
+.page-404-dec-inner p{
+	line-height: 1.6;
+	margin-bottom: 27px;
 }
 .page-404-inner {
     display: flex;
 }
 
 .page-404-lft-dec {
+    /*width: 42.49%;*/
     width: 51%;
     padding-top: 132px;
 }
 
 .page-404-rgt-img {
-    width: 49%;
+	width: 49%;
+    /*width: 57.51%;*/
 }
 .page-404-img i{
 	display: inline-block;
 	vertical-align: baseline;
+}
+.page-404-img{
+	/*padding-left: 107px;
+    padding-right: 123px;*/
+    padding-top: 11px;
+    padding-bottom: 9px;
+}
+.page-404-lft-dec .default-page-con ul, ul{
+	padding-bottom: 8px!important;
+}
+.page-404-lft-dec .default-page-con ul li, ul li{
+	padding: 2px 0 18px 22px!important;
+	text-transform: uppercase;
+    font-weight: 600;
+    font-family: Oswald;
+    color: #1A7ABE;
+}
+.page-404-btn a{
+	min-width: 170px;
+    padding: 14px 15px;
+}
+.page-404-sec {
+    padding-bottom: 61px;
 }
