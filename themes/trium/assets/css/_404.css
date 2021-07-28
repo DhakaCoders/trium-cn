@@ -10,14 +10,39 @@
 }
 
 .page-404-lft-dec {
+    /*width: 42.49%;*/
     width: 51%;
     padding-top: 132px;
 }
 
 .page-404-rgt-img {
-    width: 49%;
+	width: 49%;
+    /*width: 57.51%;*/
 }
 .page-404-img i{
 	display: inline-block;
 	vertical-align: baseline;
+}
+.page-404-img{
+	/*padding-left: 107px;
+    padding-right: 123px;*/
+    padding-top: 11px;
+    padding-bottom: 9px;
+}
+.page-404-lft-dec .default-page-con ul, ul{
+	padding-bottom: 8px!important;
+}
+.page-404-lft-dec .default-page-con ul li, ul li{
+	padding: 2px 0 18px 22px!important;
+	text-transform: uppercase;
+    font-weight: 600;
+    font-family: Oswald;
+    color: #1A7ABE;
+}
+.page-404-btn a{
+	min-width: 170px;
+    padding: 14px 15px;
+}
+.page-404-sec {
+    padding-bottom: 61px;
 }
