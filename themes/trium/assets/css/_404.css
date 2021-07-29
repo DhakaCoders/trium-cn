@@ -1,6 +1,7 @@
 .fl-h1-144{
 	font-size: 144px;
-	margin-bottom: 30px;
+	margin-bottom: 15px;
+	/*margin-bottom: 30px;*/
 	margin-top: -15px;
 }
 .block-page-sub-heading{
@@ -79,7 +80,7 @@
 
 	.fl-h1-144{
 		font-size: 128px;
-		margin-bottom: 28px;
+		margin-bottom: 14px;
 		margin-top: -21px;
 	}
 	.page-404-lft-des{
@@ -100,7 +101,7 @@
 @media (max-width: 1399px) {
 	.fl-h1-144{
 		font-size: 120px;
-		margin-bottom: 27px;
+		margin-bottom: 13px;
 	}
 	.page-404-rgt-img{
 		padding-left: 110px;
@@ -115,7 +116,7 @@
 @media(max-width: 1299px){
 	.fl-h1-144{
 		font-size: 112px;
-		margin-bottom: 26px;
+		margin-bottom: 12px;
 	}
 	.page-404-rgt-img{
 		padding-left: 100px;
@@ -126,7 +127,7 @@
 
 	.fl-h1-144{
 		font-size: 104px;
-		margin-bottom: 25px;
+		margin-bottom: 11px;
 		margin-top: -13px;
 	}
 	.page-404-rgt-img {
@@ -156,7 +157,7 @@
 	.fl-h1-144{
 		font-size: 96px;
 		margin-top: -30px;
-		margin-bottom: 23px;
+		margin-bottom: 10px;
 	}
 	.page-404-rgt-img {
     	padding-left: 30px;
@@ -209,13 +210,15 @@
 	}
 	.page-404-des-inner h1 {
     	text-align: center;
-    	margin-bottom: 34px;
+    	margin-bottom: 10px;
+    	/*margin-bottom: 34px;*/
 	    margin-top: 0;
 	}
 
 	.page-404-des h2 {
     	text-align: center;
 	    margin-bottom: 20px;
+        font-size: 30px;
 	}
 
 	.page-404-des p {
@@ -226,7 +229,7 @@
 	}
 
 	.page-404-des .default-page-con ul, .page-404-des ul {
-    	padding-left: 0;
+    	padding-left: 18px;
     	padding-bottom: 28px;
 	}
 
@@ -259,8 +262,23 @@
 		
 }
 @media(max-width: 359px){
-
-	
+	.fl-h1-144 {
+    	font-size: 64px;
+	}
+	.page-404-des h2{
+		font-size: 26px;
+	}
+	.page-404-des p{
+		line-height: 1.5;
+		margin-bottom: 26px;
+	}
+	.page-404-des .default-page-con ul, .page-404-des ul{
+		padding-bottom: 24px;
+		padding-left: 10px;
+	}
+	.page-404-btn {
+    	padding-bottom: 49px;
+	}
 }
 
 
