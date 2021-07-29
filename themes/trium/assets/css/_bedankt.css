@@ -62,15 +62,12 @@
     min-width: 240px;
     padding: 14px 15px;
 }
-.bedankt-breadcrumb-sec{
-    padding-top: 14px;
-}
-.bedankt-breadcrumb-sec .breadcrumb-cntlr{
-        padding: 13px 0;
-}
 
 
 
+
+
+/*responsive-start*/
 
 
 @media(max-width: 1699px){
@@ -212,3 +209,6 @@
     }
     
 }
+
+
+/*responsive-end*/
