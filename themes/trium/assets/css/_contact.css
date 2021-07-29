@@ -4,11 +4,8 @@
  Contact Css
 ------------------
 */
-.contact-form-sec-wrp,
-.fl-form-sec-wrp{
-    margin-bottom: -25px;
-    position: relative;
-    z-index: 1;
+.border-cntlr .ftr-top{
+    border:none;
 }
 .contact-form-block{
     padding-bottom: 108px;
@@ -492,7 +489,7 @@ Contact info
 }
 
 .contact-form-info-cntlr {
-    padding: 70px 54px 64px 54px;
+    padding: 60px 54px 60px 54px;
     background: #162B39;
     position: relative;
 }
@@ -703,12 +700,12 @@ boek-je-form-sec-wrp
 	}
     .contact-form-info ul li span,
     .contact-form-info ul li a{
-        font-size: 15px;
+        font-size: 17px;
     }
     .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field input,
     .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field label,
     .error-msg span{
-        font-size: 15px;
+        font-size: 17px;
     }
     .wpforms-container .wpforms-datepicker-wrap .wpforms-datepicker-clear{
         background-position: 50% 46%!important;    
@@ -724,6 +721,12 @@ boek-je-form-sec-wrp
     }
     .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field.NameField{
         padding-top:28px;
+    }
+    .contact-form-info-cntlr {
+        padding: 55px 45px 55px 45px;
+    }
+    .contact-google-map iframe{
+        height:600px;
     }
 }
 
