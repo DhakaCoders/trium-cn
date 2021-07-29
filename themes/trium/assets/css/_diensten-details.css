@@ -1,0 +1,103 @@
+.dinst-dtls-grds-sec{
+	padding-bottom:20px;
+}
+.diensten-details-tab-sec{
+    background: #F7F7F7;
+}
+.diensten-filterbar{
+    padding: 47px 0;
+}
+.diensten-filterbar .diensten-filter{
+	display: flex;
+	margin:0 -19px;
+}
+.diensten-filterbar .diensten-filter li{
+	padding:0 19px;
+}
+.diensten-filterbar .diensten-filter li a{
+    font-size: 18px;
+    color: #162B39;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    text-transform:uppercase;
+}
+.dnsten-dtls-tab-item {
+    border-top: 4px solid #FFFFFF;
+    padding-top: 57px;
+    padding-bottom: 57px;
+}
+.diensten-filterbar .diensten-filter li a.current{
+	color:#1A7ABE;
+	text-decoration:underline;
+}
+.active{
+    display: block;
+}
+.hide{
+    display: none;
+}
+
+
+.dnsten-service-sec{
+	padding-top:100px;
+}
+.dnsten-service-sec-cntlr {
+    padding-bottom: 110px;
+    border-bottom: 1px solid #E4E4E4;
+}
+.dnsten-service-sec-title{
+	text-align: center;
+}
+.dnsten-service-sec-title h1{
+	margin-bottom:30px;
+}
+.dnsten-service-sec-cntlr ul{
+    display: flex;
+    margin:0 -12px;
+}
+.dnsten-service-sec-cntlr ul li{
+	width:33.33%;
+	padding:0 12px;
+}
+.dnsten-service-sec-grid-item-img{
+	height:226px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding:15px;
+}
+.dnsten-service-sec-grid-item-title{
+	color:#fff;
+	text-align: center;
+	line-height: 1.2;
+}
+
+
+.diensten-detials-related-sec{
+	background:#fff!important;
+}
+@media(max-width:1699px){
+}
+@media(max-width:1499px){
+
+}
+@media(max-width:1199px){
+
+}
+@media(max-width:991px){
+
+
+}
+@media(max-width:767px){
+
+
+}
+@media(max-width:991px){
+
+}
+@media(max-width:475px){
+
+}
+@media(max-width:479px){
+    
+}

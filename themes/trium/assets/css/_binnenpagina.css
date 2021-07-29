@@ -121,11 +121,11 @@ ol li::before {
 }
 
 
-.dfp-text-module p a,
+/*.dfp-text-module p a,
 .default-page-con ul li a,
 .default-page-con ol li a{
 	text-decoration: underline;
-}
+}*/
 
 
 /*
@@ -404,11 +404,24 @@ hr{
 /*extra*/
 
 .dfp-category-module{
+	padding-top: 60px;
+}
+.dfp-category-module-inr{
 	background: #162B39;
+}
+
+.dfp-category-module .service-sec-cntlr ul{
+	padding-left: 0;
+	padding-bottom: 0;
+	margin: 0 -15px!important;
+}
+.dfp-category-module .service-sec-cntlr ul li{
+	padding: 0 15px!important;
 }
 
 .dfp-cta-module-cntlr{
 	margin-bottom: 90px;
+	padding-top: 20px;
 }
 
 .dfp-grd-module-inr{
@@ -431,10 +444,13 @@ hr{
 	padding-right: 12px;
 	padding-bottom: 25px;
 }
+.dfp-grd-item:nth-child(3n+1){
+	clear: left;
+}
 
 .dfp-service-module{
 	padding-top: 30px;
-	padding-bottom: 50px;
+	padding-bottom: 30px;
 }
 
 .dfp-service-grds{
@@ -526,6 +542,11 @@ hr{
 }
 
 
+.dfp-service-module .service-sec-grid-item .service-sec-grid-item-img{
+	height: 226px;
+}
+
+
 
 
 
@@ -548,10 +569,6 @@ hr{
 
 @media(max-width: 1599px){
 	
-	/*.block-1440{
-		padding-left: 15px;
-		padding-right: 15px;
-	}*/
 	
 
 }
@@ -560,34 +577,28 @@ hr{
 }
 
 @media(max-width: 1399px){
-	.dfp-promo-module-title{
-		margin-bottom: 25px;
-	}
+	
 	
 
 
 }
 
 @media(max-width: 1299px){
-	.block-1285{
-		padding-left: 15px;
-		padding-right: 15px;
-	}
+	
 }
 
 @media(max-width: 1199px){
-	.block-850{
-		padding-left: 15px;
-		padding-right: 15px;
+	.dfp-plate-one-img-bx {
+	    margin-bottom: 45px;
 	}
-	.block-1285{
-		padding-left: 15px;
-		padding-right: 15px;
-	}
-	
-	
 	.default-page-con {
 	    padding-bottom: 60px;
+	}
+	.dfp-cta-module-cntlr {
+	    margin-bottom: 80px;
+	}
+	.dfp-grd-module-inr{
+		padding-bottom: 60px;
 	}
 	
 
@@ -595,7 +606,12 @@ hr{
 
 
 @media(max-width: 991px){
-	
+	.dfp-promo-module-title{
+		margin-bottom: 34px;
+	}
+	.dfp-plate-one-img-bx {
+	    margin-bottom: 35px;
+	}
 	.default-page-con{
 		padding-bottom: 80px;
 	}
@@ -612,7 +628,6 @@ hr{
 		margin-bottom: 30px;
 	}*/
 	.dfp-tbl-wrap {
-	    padding-top: 40px;
 	    margin-bottom: 50px;
 	}
 	.default-page-con {
@@ -624,6 +639,21 @@ hr{
 	.has-inline-bg .gallery-icon-img {
 	    height: 350px;
 	}
+	.dfp-cta-module-cntlr {
+	    margin-bottom: 65px;
+	}
+	.dfp-grd-item:nth-child(3n+1) {
+	    clear: none;
+	}
+	.dfp-grd-item:nth-child(2n+1) {
+	    clear: left;
+	}
+	.dfp-grd-item{
+		width: 50%;
+	}
+	.dfp-grd-module-inr{
+		padding-bottom: 45px;
+	}
 	
 	
 	
@@ -632,13 +662,25 @@ hr{
 
 }
 
+@media(max-width: 880px){
+	.block-850{
+		max-width: 100%;
+		width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
 
 @media(max-width: 767px){
 	.dfp-promo-module {
 	    padding-bottom: 0;
 	}
 	.dfp-promo-module-title{
-		margin-bottom: 25px;
+		margin-bottom: 28px;
+	}
+	.dfp-plate-one-img-bx {
+	    margin-bottom: 25px;
 	}
 	.dfp-promo-module > strong{
 		font-size: 24px;
@@ -652,12 +694,11 @@ hr{
 		float: none;
 	}
 	.default-page-con{
-		padding-bottom: 20px;
+		padding-bottom: 30px;
 	}
 	.dfp-tbl-wrap{
 		margin-bottom: 20px;
 		padding-bottom: 20px;
-		padding-top: 0;
 		border-top: none;
 	}
 	.default-page-con{
@@ -695,14 +736,8 @@ hr{
 	}
 	.fl-fancy-module{
 		height: 400px;
-		margin-bottom: 20px;
+		margin-bottom: 35px;
 	}
-	/*.cta-ctlr{
-		padding: 60px 20px;
-	}
-	.cta-ctlr p br{
-		display: none;
-	}*/
 	
 	.gallery-wrap{
 		padding-top: 10px;
@@ -730,7 +765,25 @@ hr{
 	.has-inline-bg .gallery-icon-img {
 	    height: 250px;
 	}
-	
+	.dfp-cta-module-cntlr {
+	    margin-bottom: 50px;
+	}
+	.dfp-grd-item:nth-child(2n+1) {
+	    clear: none;
+	}
+	.dfp-grd-item{
+		width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	.dfp-grd-items {
+	    margin-left: 0;
+	    margin-right: 0;
+	}
+	.dfp-grd-module-inr{
+		margin-bottom: 65px;
+		padding-bottom: 30px;
+	}
 	
 
 	
@@ -751,12 +804,12 @@ hr{
 
 @media(max-width: 575px){
 	.gallery {
-	    margin-left: -5px;
-	    margin-right: -5px;
+	    margin-left: -8px;
+	    margin-right: -8px;
 	    padding-bottom: 10px;
 	}
 	.gallery-item {
-	    padding: 0 5px;
+	    padding: 0 8px;
 	    margin-bottom: 10px;
 	}
 	.default-page-con ol,
@@ -772,9 +825,9 @@ hr{
 	.default-page-con ol li::before, ol li::before{
 		margin-right: 5px;
 	}
-	.default-page-con p {
+	/*.default-page-con p {
 	    margin-bottom: 15px;
-	}
+	}*/
 	.default-page-con ul li::before, ul li::before{
 		margin-top: 8px;
 	}
@@ -804,8 +857,12 @@ hr{
 	    height: 160px;
 	    display: block;
 	}
-	.default-page-con h2 {
-	    margin-bottom: 15px;
+	.fl-fancy-module{
+		height: 360px;
+	}
+	.dfp-cta-module-cntlr {
+	    margin-bottom: 35px;
+	    padding-top: 10px;
 	}
 	
 	

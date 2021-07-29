@@ -234,6 +234,34 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
   /*start of Noyon*/
 
+  if( $('.hambergar-cntlr').length ){
+    $('.hambergar-cntlr').click(function(){
+      $('body').toggleClass('allWork');
+    });
+  }
+  if( $('li.menu-item-has-children a').length ){
+    $('li.menu-item-has-children a').click(function(e){
+     event.preventDefault();
+     $(this).parents('.xs-mobile-menu').toggleClass('sub-menu-active');
+     $(this).parent().toggleClass('this-sub-menu-active');
+   });
+  }
+
+  
+  if (windowWidth <= 767) {
+    if( $('.uspBarSlider').length ){
+      $('.uspBarSlider').slick({
+        dots: false,
+        infinite: false,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        speed: 700,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      });
+    }
+  }
 
 
   /*start of Sabbir*/
@@ -245,10 +273,102 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 
   /*start of Niaz*/
+  $('.diensten-filter li a').click(function(){
+
+        var tab_id = $(this).data('tag');
+
+        $('.diensten-filter li a').removeClass('current');
+        // $('.dnsten-dtls-tab-con').removeClass('current');
+
+        $(this).addClass('current');
+
+        $('.dnsten-dtls-tab-item').removeClass('current').addClass('hide');
+        $('#'+tab_id).addClass('current').removeClass('hide');
+    });
   
+  // contact form-val
+  if( $('.contact-form-wrp').length ){
+    $('.contact-form-wrp .wpforms-container .wpforms-form .wpforms-submit-container button').on('click', function(){
+      $('.wpforms-field input[required],.wpforms-field select[required]').parents('.wpforms-field').addClass('wpforms-has-error');
+      $('.wpforms-field input[required],.wpforms-field select[required]').addClass('wpforms-error');
+    });
+  }
 
 
+  if( $('.wpforms-error').length ){
+    $('.wpforms-error').on('click', function(){
+      $(this).parents('.wpforms-field').removeClass('wpforms-has-error');
+    });
+  }
+  //==============
   /*start of Shariful*/
+
+  if (windowWidth <= 767) {
+    if( $('.dfpGrdSlider').length ){
+      $('.dfpGrdSlider').slick({
+        dots: true,
+        infinite: false,
+        autoplay: false,
+        arrows: false,
+        autoplaySpeed: 4000,
+        speed: 700,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      });
+    }
+  }
+
+  if( $('.cleientSlider').length ){
+    $('.cleientSlider').slick({
+      dots: false,
+      infinite: true,
+      autoplay: true,
+      autoplaySpeed: 4000,
+      speed: 700,
+      slidesToShow: 6,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 1600,
+          settings: {
+            slidesToShow: 5,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 1200,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 2,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 576,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ]
+    });
+  }
 
 
     new WOW().init();
