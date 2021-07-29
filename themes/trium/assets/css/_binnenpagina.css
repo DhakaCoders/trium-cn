@@ -450,7 +450,7 @@ hr{
 
 .dfp-service-module{
 	padding-top: 30px;
-	padding-bottom: 50px;
+	padding-bottom: 30px;
 }
 
 .dfp-service-grds{
@@ -539,6 +539,11 @@ hr{
 	padding-left: 12px;
 	padding-right: 12px;
 	padding-bottom: 25px;
+}
+
+
+.dfp-service-module .service-sec-grid-item .service-sec-grid-item-img{
+	height: 226px;
 }
 
 
