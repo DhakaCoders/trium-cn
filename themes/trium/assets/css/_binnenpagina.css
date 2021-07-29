@@ -868,6 +868,30 @@ hr{
 	    padding-top: 50px;
 	    padding-bottom: 30px;
 	}
+
+	.dfpGrdSlider .dfp-grd-item{
+		display: none;
+	}
+
+	.dfpGrdSlider .dfp-grd-item:first-child{
+		display: none;
+	}
+
+	.dfpGrdSlider.slick-initialized .dfp-grd-item{
+		display: block;
+	}
+
+	.rdrSlider .referenties-detials-related-grd-item{
+		display: none;
+	}
+
+	.rdrSlider .referenties-detials-related-grd-item:first-child{
+		display: none;
+	}
+
+	.rdrSlider.slick-initialized .referenties-detials-related-grd-item{
+		display: block;
+	}
 	
 
 	
