@@ -242,7 +242,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
   if( $('li.menu-item-has-children a').length ){
     $('li.menu-item-has-children a').click(function(e){
      event.preventDefault();
-     $(this).parents('.xs-mobile-menu').toggleClass('sub-menu-active');
+     $(this).next().slideToggle(300);
      $(this).parent().toggleClass('this-sub-menu-active');
    });
   }
