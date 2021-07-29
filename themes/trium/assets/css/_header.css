@@ -424,12 +424,7 @@ body.allWork {
     height: 100%;
     max-width: 283px;
     width: 100%;
-    padding-bottom: 179px;
-
-    right: 0;
-    opacity: 1;
-    z-index: 99999;
-    width: 100%;
+    padding-bottom: 208px;
 }
 .xs-mbl-hdr{
 	position: absolute;
@@ -442,7 +437,6 @@ body.allWork {
 	height: 100%;
 	width: 100%;
 	overflow-y: auto;
-	padding-bottom: 28px;
 }
 
 /*responsive*/
@@ -623,13 +617,20 @@ body.allWork {
 	}
 	.header-inr{
 		align-items: flex-end;
+		position: relative;
 	}
 	.hdr-lft{
-		padding-top: 0;
-		padding-bottom: 10px;
+		position: absolute;
+		bottom: 10px;
+		left: 0;
 	}
 	.hdr-tel a{
 		font-size: 18px;
+		padding-left: 51px;
+		padding-right: 51px;
+	}
+	.xs-mobile-menu .hdr-tel a{
+		font-size: 17.98999px;
 		padding-left: 51px;
 		padding-right: 51px;
 	}
@@ -662,10 +663,6 @@ body.allWork {
 	}
 	.hdr-socials:after{
 		content: none;
-	}
-	.xs-mobile-menu .hdr-tel a{
-		padding-left: 50px;
-		padding-right: 50px;
 	}
 	.xs-mbl-btm{
 		position: absolute;
@@ -737,7 +734,7 @@ body.allWork {
 		-ms-box-shadow: initial;
 		background: transparent;
 		-webkit-box-shadow: initial;
-		/*display: none;*/
+		display: none;
 	}
 	nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li {
 		border-bottom: 0;
@@ -753,7 +750,7 @@ body.allWork {
 		text-transform: uppercase;
 		color: #777F84;
 	}
-	/*nav.main-nav > ul > li.menu-item-has-children.sub-menu-arrow > a:after {
+	nav.main-nav > ul > li.menu-item-has-children.this-sub-menu-active > a:before {
 		transform: rotate(-180deg);
 		-o-transform: rotate(-180deg);
 		-ms-transform: rotate(-180deg);
@@ -761,23 +758,22 @@ body.allWork {
 	}
 	nav.main-nav > ul > li.menu-item-has-children > a{
 		position: relative;
+		padding-right: 40px;
+		display: inline-block;
 	}
-	nav.main-nav > ul > li.menu-item-has-children > a:after {
-		content: "\f107"!important;
-		font-family: 'Font Awesome 5 Free';
-		font-weight: 600;
-		text-decoration: inherit;
-		color: #141414;
-		font-size: 19px;
-		padding-right: 0;
+	nav.main-nav > ul > li.menu-item-has-children > a:before {
+		content: "";
 		position: absolute;
-		top: 0;
+		top: 6px;
 		right: 0;
-		line-height: 15px;
+		background-image: url(../images/xs-btm-arrow.svg);
+		width: 22px;
+		height: 14px;
+		background-size: contain;
 		transition: all 0.5s;
 		-ms-transition: all 0.5s;
 		-webkit-transition: all 0.5s;
-	}*/
+	}
 }
 
 @media(max-width: 767px){
@@ -811,14 +807,13 @@ body.allWork {
 		display: flex;
 		justify-content: flex-end;
 	}
-	.xs-mobile-menu .hdr-tel a{
-		padding-left: 50px;
-		padding-right: 50px;
-	}
 }
 @media(max-width: 575px){
 
 }
 @media(max-width: 479px){
-
+	.hdr-tel a{
+		padding-left: 49px;
+		padding-right: 49px;
+	}
 }
