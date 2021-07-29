@@ -774,12 +774,23 @@ body.allWork {
 		-ms-transition: all 0.5s;
 		-webkit-transition: all 0.5s;
 	}
+	.hdr-topbar{
+		position: absolute;
+		top: 0;
+		right: -15px;
+	}
+	.hdr-rgt{
+		margin-top: 75px;
+	}
 }
 
 @media(max-width: 767px){
 	.usp-bar{
 		padding-left: 50px;
 		padding-right: 50px;
+	}
+	.hdr-topbar{
+		right: -20px;
 	}
 	.usp-bar:after{
 		width: 20px;
