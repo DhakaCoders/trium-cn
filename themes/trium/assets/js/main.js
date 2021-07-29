@@ -245,9 +245,19 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 
   /*start of Niaz*/
+  $('.diensten-filter li a').click(function(){
+
+        var tab_id = $(this).data('tag');
+
+        $('.diensten-filter li a').removeClass('current');
+        // $('.dnsten-dtls-tab-con').removeClass('current');
+
+        $(this).addClass('current');
+
+        $('.dnsten-dtls-tab-item').removeClass('current').addClass('hide');
+        $('#'+tab_id).addClass('current').removeClass('hide');
+    });
   
-
-
   /*start of Shariful*/
 
 
