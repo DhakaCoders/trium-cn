@@ -38,12 +38,14 @@
 }
 .ftr-lg-logo a{
 	display: inline-block;
+	max-width: 233px;
 }
 .ftr-sm-logo{
 
 }
 .ftr-sm-logo a{
 	display: inline-block;
+	max-width: 155px;
 }
 .ftr-col-menu{
 	display: flex;

@@ -424,7 +424,7 @@ body.allWork {
     height: 100%;
     max-width: 283px;
     width: 100%;
-    padding-bottom: 77px;
+    padding-bottom: 179px;
 
     right: 0;
     opacity: 1;
@@ -437,6 +437,12 @@ body.allWork {
 	right: 0;
 	left: 0;
 	z-index: 10;
+}
+.xs-menu{
+	height: 100%;
+	width: 100%;
+	overflow-y: auto;
+	padding-bottom: 28px;
 }
 
 /*responsive*/
@@ -682,6 +688,96 @@ body.allWork {
 	.hdr-socials ul li{
 		padding: 0 15px;
 	}
+
+	.xs-menu{
+		padding-left: 25px;
+	}
+	nav.main-nav > ul{
+		padding: 0;
+		margin: 0;
+		display: block;
+	}
+	nav.main-nav > ul > li{
+		padding: 17px 0;
+	}
+	nav.main-nav > ul > li:first-child{
+		padding-top: 0;
+	}
+	nav.main-nav > ul > li:last-child{
+		padding-bottom: 0;
+	}
+	nav.main-nav > ul > li > a{
+		font-family: 'Oswald', sans-serif;
+		font-weight: 500;
+		font-size: 22px;
+		line-height: 1;
+		letter-spacing: 0.02em;
+		text-transform: uppercase;
+		color: #777F84;
+		padding-bottom: 0;
+	}
+	nav.main-nav > ul > li > a:after{
+		content: none!important;
+		display: none!important;
+	}
+	nav.main-nav > ul > li.menu-item-has-children:hover ul.sub-menu {
+		position: static;
+		top: 100%;
+		width: 100%;
+		padding: 30px 0 0 0;
+		transition: initial;
+		-ms-transition: initial;
+		-webkit-transition: initial;
+		transform: initial;
+		-ms-transform: initial;
+		-webkit-transform: initial;
+		-o-transform: initial;
+		opacity: 1;
+		box-shadow: initial;
+		-ms-box-shadow: initial;
+		background: transparent;
+		-webkit-box-shadow: initial;
+		/*display: none;*/
+	}
+	nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li {
+		border-bottom: 0;
+		padding-left: 0;
+	}
+	nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li:after{
+		content: none;
+	}
+	nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li a{
+		font-family: 'Oswald', sans-serif;
+		font-weight: 500;
+		font-size: 18px;
+		text-transform: uppercase;
+		color: #777F84;
+	}
+	/*nav.main-nav > ul > li.menu-item-has-children.sub-menu-arrow > a:after {
+		transform: rotate(-180deg);
+		-o-transform: rotate(-180deg);
+		-ms-transform: rotate(-180deg);
+		-webkit-transform: rotate(-180deg);
+	}
+	nav.main-nav > ul > li.menu-item-has-children > a{
+		position: relative;
+	}
+	nav.main-nav > ul > li.menu-item-has-children > a:after {
+		content: "\f107"!important;
+		font-family: 'Font Awesome 5 Free';
+		font-weight: 600;
+		text-decoration: inherit;
+		color: #141414;
+		font-size: 19px;
+		padding-right: 0;
+		position: absolute;
+		top: 0;
+		right: 0;
+		line-height: 15px;
+		transition: all 0.5s;
+		-ms-transition: all 0.5s;
+		-webkit-transition: all 0.5s;
+	}*/
 }
 
 @media(max-width: 767px){
