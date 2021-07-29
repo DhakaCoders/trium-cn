@@ -71,6 +71,45 @@ a.fl-read-more-btn{
 }
 
 /* == cta == */
-.blog-grid-items ul li.cta{
+.blog-grid-items ul li.blog-grid-cta{
 	width: 100%!important;
+}
+.blog-grid-items ul li.blog-grid-cta .dfp-cta-module-cntlr{
+	margin-bottom: 0;
+}
+
+/* ================= */
+/* == responsive == */
+/* =============== */
+
+@media (max-width: 1699px) {
+	
+}
+
+@media (max-width: 1499px) {
+	
+}
+
+@media (max-width: 1199px) {
+	
+}
+
+@media (max-width: 991px) {
+	
+}
+
+@media (max-width: 767px) {
+	
+}
+
+@media (max-width: 575px) {
+	
+}
+
+@media (max-width: 479px) {
+	
+}
+
+@media (max-width: 359px) {
+	
 }
