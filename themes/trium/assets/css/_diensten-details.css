@@ -35,14 +35,17 @@
 }
 
 
-
+.dnsten-service-sec{
+	padding-bottom:110px;
+	padding-top:100px;
+}
 .dnsten-service-sec-cntlr ul{
     display: flex;
     margin:0 -12px;
 }
 .dnsten-service-sec-cntlr ul li{
 	width:33.33%;
-	padding:12px;
+	padding:0 12px;
 }
 .dnsten-service-sec-grid-item-img{
 	height:226px;
