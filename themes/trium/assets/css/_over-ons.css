@@ -147,6 +147,18 @@
 	color: #1A7ABE;
 }
 
+.cleientSlider .client-grd-item{
+	display: none;
+}
+
+.cleientSlider .client-grd-item:first-child{
+	display: none;
+}
+
+.cleientSlider.slick-initialized .client-grd-item{
+	display: block;
+}
+
 
 @media(max-width: 1399px){
 	.page-entry-hdr h1 {
@@ -333,6 +345,9 @@
 	}
 	.over-ons-lookout-sec {
 	    padding-bottom: 50px;
+	}
+	.page-entry-hdr-cntlr.over-ons{
+		padding-top: 30px;
 	}
 }
 
