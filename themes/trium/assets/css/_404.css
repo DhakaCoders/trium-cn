@@ -199,32 +199,52 @@
     	max-width: 375px;
     	width: 100%;
     	margin: 0 auto;
+    	padding-top: 0;
 	}
 	.page-404-inner {
     	display: block;
 	}
 	.page-404-rgt-img {
-    	padding: 0;
+    	padding:47px 0;
 	}
 	.page-404-des-inner h1 {
     	text-align: center;
+    	margin-bottom: 34px;
+	    margin-top: 0;
 	}
 
 	.page-404-des h2 {
     	text-align: center;
+	    margin-bottom: 20px;
 	}
 
 	.page-404-des p {
     	text-align: center;
+    	font-size: 16px;
+		line-height: 1.6;
+		margin-bottom: 31px;
 	}
 
 	.page-404-des .default-page-con ul, .page-404-des ul {
     	padding-left: 0;
+    	padding-bottom: 28px;
 	}
 
 	.page-404-btn a {
     	width: 100%;
-	}	
+	}
+	.page-404-des .default-page-con ul li, .page-404-des ul li{
+		padding: 2px 0 18px 22px;
+	}
+	.page-404-sec{
+		padding: 0;
+	}
+	.page-404-btn {
+    	padding-bottom: 59px;
+	}
+	.page-404-img{
+		padding: 3px 0;
+	}
 }
 @media(max-width: 575px){
 
