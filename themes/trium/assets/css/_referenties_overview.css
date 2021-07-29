@@ -1,6 +1,5 @@
 .blog-grids-cntrl{
 	padding-bottom: 56px;
-	border-bottom: 2px solid #E4E4E4;
 }
 .blog-grid-items ul{
 	display: flex;
@@ -55,6 +54,10 @@
 }
 .bgi-des p{
 	line-height: 1.6;
+	color: #777F84;
+	font-weight: 400;
+    font-family: 'Lato', sans-serif;
+    text-transform: initial;
 }
 .bgi-des p:last-of-type{
 	margin-bottom: 0;
