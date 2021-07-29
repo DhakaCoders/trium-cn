@@ -197,7 +197,7 @@
     	width: 100%;
 	}
 	.page-404-img{
-		max-width: 375px;
+		max-width: 325px;
     	width: 100%;
     	margin: 0 auto;
 	}
@@ -262,11 +262,17 @@
 
 	.fl-h1-144{
 		font-size: 80px;
+	}
+	.page-404-img{
+		max-width: 270px;
 	}	
 }
 @media(max-width: 479px){
 	.fl-h1-144{
 		font-size: 72px;
+	}
+	.page-404-img {
+    	max-width: 168px;
 	}
 		
 }
@@ -287,6 +293,9 @@
 	}
 	.page-404-btn {
     	padding-bottom: 49px;
+	}
+	.page-404-rgt-img {
+    	padding: 40px 0;
 	}
 }
 
