@@ -592,6 +592,9 @@ hr{
 	.dfp-cta-module-cntlr {
 	    margin-bottom: 80px;
 	}
+	.dfp-grd-module-inr{
+		padding-bottom: 60px;
+	}
 	
 
 }
@@ -620,7 +623,6 @@ hr{
 		margin-bottom: 30px;
 	}*/
 	.dfp-tbl-wrap {
-	    padding-top: 40px;
 	    margin-bottom: 50px;
 	}
 	.default-page-con {
@@ -643,6 +645,9 @@ hr{
 	}
 	.dfp-grd-item{
 		width: 50%;
+	}
+	.dfp-grd-module-inr{
+		padding-bottom: 45px;
 	}
 	
 	
@@ -684,12 +689,11 @@ hr{
 		float: none;
 	}
 	.default-page-con{
-		padding-bottom: 20px;
+		padding-bottom: 30px;
 	}
 	.dfp-tbl-wrap{
 		margin-bottom: 20px;
 		padding-bottom: 20px;
-		padding-top: 0;
 		border-top: none;
 	}
 	.default-page-con{
@@ -773,6 +777,7 @@ hr{
 	}
 	.dfp-grd-module-inr{
 		margin-bottom: 65px;
+		padding-bottom: 30px;
 	}
 	
 
