@@ -160,11 +160,11 @@
         font-size: 30px;
         margin-bottom: 20px;
     }
-    .bedankt-links ul{
+    /*.bedankt-links ul{
         display: block;
-    }
+    }*/
     .bedankt-links ul li {
-        padding: 13px 0px;
+        padding: 13px 40px;
     }
     .bedankt-links {
         padding-bottom: 40px;
@@ -181,7 +181,12 @@
     }
 }
 @media(max-width: 575px){
-
+    .bedankt-links ul{
+        display: block;
+    }
+    .bedankt-links ul li {
+        padding: 13px 0px;
+    }
     
 }
 @media(max-width: 479px){
