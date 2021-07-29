@@ -160,6 +160,7 @@
     -o-transform: translate(50%,-50%);
     height: 8px;
     width: 6px;
+    margin-top: 2px;
     background-size: contain;
     background-image: url(../images/right-arrow.svg);
 }
