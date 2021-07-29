@@ -192,15 +192,21 @@
 		font-size: 88px;
 	}
 	.page-404-rgt-img {
-    	max-width: 375px;
+    	width: 100%;
+	}
+	.page-404-img{
+		max-width: 375px;
     	width: 100%;
     	margin: 0 auto;
 	}
 	.page-404-lft-des {
-    	max-width: 375px;
     	width: 100%;
-    	margin: 0 auto;
     	padding-top: 0;
+	}
+	.page-404-des-inner{
+		max-width: 375px;
+		width: 100%;
+		margin: 0 auto;
 	}
 	.page-404-inner {
     	display: block;
