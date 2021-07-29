@@ -234,6 +234,34 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
   /*start of Noyon*/
 
+  if( $('.hambergar-cntlr').length ){
+    $('.hambergar-cntlr').click(function(){
+      $('body').toggleClass('allWork');
+    });
+  }
+  if( $('li.menu-item-has-children a').length ){
+    $('li.menu-item-has-children a').click(function(e){
+     event.preventDefault();
+     $(this).parents('.xs-mobile-menu').toggleClass('sub-menu-active');
+     $(this).parent().toggleClass('this-sub-menu-active');
+   });
+  }
+
+  
+  if (windowWidth <= 767) {
+    if( $('.uspBarSlider').length ){
+      $('.uspBarSlider').slick({
+        dots: false,
+        infinite: false,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        speed: 700,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      });
+    }
+  }
 
 
   /*start of Sabbir*/
