@@ -404,11 +404,24 @@ hr{
 /*extra*/
 
 .dfp-category-module{
+	padding-top: 60px;
+}
+.dfp-category-module-inr{
 	background: #162B39;
+}
+
+.dfp-category-module .category-brand-sec-cntlr ul{
+	padding-left: 0;
+	padding-bottom: 0;
+	margin: 0 -15px!important;
+}
+.dfp-category-module .category-brand-sec-cntlr ul li{
+	padding: 0 15px!important;
 }
 
 .dfp-cta-module-cntlr{
 	margin-bottom: 90px;
+	padding-top: 20px;
 }
 
 .dfp-grd-module-inr{
