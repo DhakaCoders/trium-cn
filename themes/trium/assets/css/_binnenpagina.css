@@ -448,6 +448,10 @@ hr{
 	clear: left;
 }
 
+.dfp-grd-module .bgi-title{
+	padding-bottom: 0;
+}
+
 .dfp-service-module{
 	padding-top: 30px;
 	padding-bottom: 30px;
@@ -702,7 +706,7 @@ hr{
 		border-top: none;
 	}
 	.default-page-con{
-		padding-top: 0;
+		padding-top: 30px;
 	}
 	.table-dsc {
 	    overflow-x: scroll;
