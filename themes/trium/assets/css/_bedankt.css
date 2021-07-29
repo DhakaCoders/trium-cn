@@ -156,14 +156,15 @@
     .bedankt-massage-icon {
         padding-bottom: 31px;
     }
-    .bedankt-heading {
+    .bedankt-title .bedankt-heading {
+        font-size: 30px;
         margin-bottom: 20px;
     }
-    .bedankt-links ul{
+    /*.bedankt-links ul{
         display: block;
-    }
+    }*/
     .bedankt-links ul li {
-        padding: 13px 0px;
+        padding: 13px 40px;
     }
     .bedankt-links {
         padding-bottom: 40px;
@@ -171,9 +172,21 @@
     .bedankt-btn a{
         width: 100%;
     }
+    .bedankt-dec p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+    .bedankt-links ul li a{
+        font-size: 16px;
+    }
 }
 @media(max-width: 575px){
-
+    .bedankt-links ul{
+        display: block;
+    }
+    .bedankt-links ul li {
+        padding: 13px 0px;
+    }
     
 }
 @media(max-width: 479px){
@@ -181,6 +194,21 @@
     
 }
 @media(max-width: 359px){
-
+    .bedankt-title .bedankt-heading{
+        font-size: 26px;
+    }
+    .bedankt-dec p{
+        line-height: 1.5;
+    }
+    .bedankt-dec p {
+        margin-bottom: 16px;
+    }
+    .bedankt-links {
+        padding-bottom: 30px;
+    }
+    .bedankt-sec {
+        padding-top: 50px;
+        padding-bottom: 45px;
+    }
     
 }
