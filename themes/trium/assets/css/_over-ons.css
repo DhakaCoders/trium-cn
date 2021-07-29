@@ -69,31 +69,31 @@
 	padding-right: 20px;
 }
 
-.over-ons-division-sec{
+.over-ons-lookout-sec{
 	padding-top: 70px;
-	padding-bottom: 85px;
+	padding-bottom: 90px;
 }
 
-.over-ons-division-sec-inr{
+.over-ons-lookout-sec-inr{
 	display: flex;
 	align-items: center;
 }
-.over-ons-division-logo{
+.over-ons-lookout-logo{
 	width: 50%;
 	padding-right: 110px;
 }
-.over-ons-division-des{
+.over-ons-lookout-des{
 	width: 50%;
 }
 
-.over-ons-division-logo-img{
+.over-ons-lookout-logo-img{
 	height: 400px;
 	border: 6px solid #F3F3F3;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
-.over-ons-division-logo-img img{
+.over-ons-lookout-logo-img img{
 	max-width: 350px;
 }
 
