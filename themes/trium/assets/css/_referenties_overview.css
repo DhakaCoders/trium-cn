@@ -1,6 +1,4 @@
-.breadcrumb-sec{
-	display: none;
-}
+
 .blog-grids-cntrl{
 	padding-bottom: 56px;
 }
@@ -36,7 +34,7 @@
 	-webkit-transition: all 0.5s;
 }
 .blog-grid-des{
-	margin-top: 40px;
+	padding-top: 40px;
 	text-align: center;
 }
 .blog-grid-des-inner{
@@ -45,8 +43,8 @@
 }
 .bgi-title{
 	line-height: 1.2;
-	text-align: center;
-	margin-bottom: 12px;
+	padding-bottom: 12px;
+	margin-bottom: 0;
 }
 .bgi-title a{
 	color: #162B39;
@@ -92,6 +90,12 @@ a.fl-read-more-btn{
 	.blog-grid-items ul li{
 		padding: 0 11px 78px!important;
 	}
+	.blog-grid-des{
+		padding-top: 38px;
+	}
+	.bgi-title{
+		padding-bottom: 13px;
+	}
 	.blog-grid-items ul li.blog-grid-cta{
 		padding: 0 0 78px!important;
 	}
@@ -106,6 +110,12 @@ a.fl-read-more-btn{
 	}
 	.blog-grid-items ul li{
 		padding: 0 10px 73px!important;
+	}
+	.blog-grid-des{
+		padding-top: 36px;
+	}
+	.bgi-title{
+		padding-bottom: 14px;
 	}
 	.blog-grid-items ul li.blog-grid-cta{
 		padding: 0 0 73px!important;
@@ -134,11 +144,24 @@ a.fl-read-more-btn{
 	.blog-grid-img{
 		height: 420px;
 	}
+	.bgi-title{
+		padding-bottom: 15px;
+	}
 }
 
 @media (max-width: 991px) {
 	.blog-grid-items ul li{
 		padding: 0 8px 63px!important;
+		width: 50%!important;
+	}
+	.blog-grid-img{
+		height: 450px;
+	}
+	.blog-grid-des{
+		padding-top: 34px;
+	}
+	.bgi-title{
+		padding-bottom: 16px;
 	}
 	.blog-grid-items ul li.blog-grid-cta{
 		padding: 0 0 63px!important;
@@ -146,6 +169,9 @@ a.fl-read-more-btn{
 }
 
 @media (max-width: 767px) {
+	.blog-page-sec .dfp-promo-module{
+		padding-top: 30px;
+	}
 	.blog-grid-items ul li{
 		padding: 0 8px 57px!important;
 	}
@@ -155,21 +181,51 @@ a.fl-read-more-btn{
 	a.fl-read-more-btn{
 		font-size: 16px;
 	}
+	.blog-grid-des{
+		padding-top: 32px;
+	}
+	.bgi-title{
+		padding-bottom: 18px;
+	}
+	.blog-grid-cta .cta-module-sec{
+		margin-left: -20px;
+		margin-right: -20px;
+	}
 }
 
 @media (max-width: 575px) {
+	.blog-page-sec .dfp-promo-module-title{
+		margin-bottom: 38px;
+	}
+	.blog-grid-items ul{
+		margin: 0!important;
+	}
 	.blog-grid-items ul li{
-		padding: 0 8px 50px!important;
+		padding: 0 0 50px!important;
+		width: 100%!important;
+	}
+	.blog-grid-img{
+		height: 475px;
+	}
+	.bgi-title{
+		padding-bottom: 20px;
 	}
 	.blog-grid-items ul li.blog-grid-cta{
 		padding: 0 0 50px!important;
 	}
+	.blog-grid-des{
+		text-align: left;
+	}
 }
 
 @media (max-width: 479px) {
-	
+	.blog-grid-img{
+		height: 460px;
+	}
 }
 
-@media (max-width: 359px) {
-	
+@media (max-width: 375px) {
+	.blog-grid-img{
+		height: 420px;
+	}
 }

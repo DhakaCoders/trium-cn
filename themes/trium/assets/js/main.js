@@ -275,6 +275,21 @@ google.maps.event.addDomListener(window, 'load', initialize);
   //==============
   /*start of Shariful*/
 
+  if (windowWidth <= 767) {
+  if( $('.dfpGrdSlider').length ){
+    $('.dfpGrdSlider').slick({
+      dots: true,
+      infinite: false,
+      autoplay: false,
+      arrows: false,
+      autoplaySpeed: 4000,
+      speed: 700,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    });
+  }
+}
+
 
     new WOW().init();
 
