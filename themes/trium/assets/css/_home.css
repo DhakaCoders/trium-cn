@@ -146,6 +146,12 @@
 	color: #fff;
 }
 
+.home .service-sec{
+	margin-bottom: 0;
+}
+.home .referenties-detials-related-sec{
+	padding-bottom: 60px;
+}
 
 /*responsive*/
 @media(max-width: 1699px){
@@ -189,6 +195,9 @@
 	.lftimg-rgtdesc-lft{
 		height: 400px;
 	}
+	.home .referenties-detials-related-sec{
+		padding-bottom: 40px;
+	}
 }
 @media(max-width: 991px){
 	.hm-banner-cntlr{
@@ -199,6 +208,9 @@
 	}
 	.lftimg-rgtdesc-rgt{
 		padding-left: 30px;
+	}
+	.home .referenties-detials-related-sec{
+		padding-bottom: 30px;
 	}
 }
 
@@ -242,6 +254,9 @@
 	}
 	.lftimg-rgtdesc-mudl-title.fl-h2{
 		margin-bottom: 25px;
+	}
+	.home .referenties-detials-related-sec{
+		padding-bottom: 20px;
 	}
 }
 @media(max-width: 639px){
