@@ -478,6 +478,13 @@ hr{
     padding-bottom: 30px;
 }
 
+.title-show .service-sec-grid-item .service-sec-grid-item-title{
+	opacity:1;
+    transform:scale(1);
+    -webkit-transform:scale(1);
+    -ms-transform:scale(1);
+}
+
 
 
 
@@ -510,7 +517,7 @@ hr{
 	color: #1A7ABE;
 }
 .back-btn a:hover i{
-	margin-left: 5px;
+	margin-left: -5px;
 }
 /*.back-btn a:hover svg{
 	fill: #000;

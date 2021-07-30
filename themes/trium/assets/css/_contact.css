@@ -5,7 +5,7 @@
 ------------------
 */
 .border-cntlr .ftr-top{
-    border:none;
+    border-top:none;
 }
 .contact-form-block{
     padding-bottom: 108px;
@@ -303,9 +303,9 @@ body.woocommerce-edit-account .success-msg {
     font-family: 'Oswald', sans-serif
 }
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-submit-container button:hover{
-	background: #FFA800 !important;
+	background: #162B39 !important;
 	color: #fff !important;
-	border-color: #FFA800 !important;
+	border-color: #162B39 !important;
 	transition: all 0.5s;
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
@@ -322,7 +322,7 @@ body.woocommerce-edit-account .success-msg {
     text-decoration: underline;
 }
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-description p a:hover{
-	color: #FFA800;
+	color: #162B39;
     text-decoration: none;
 }
 .contact-form-wrp .wpforms-container .wpforms-form .form-privacy-text{
@@ -495,8 +495,8 @@ Contact info
     background: #162B39;
     position: relative;
 }
-.fl-h6.contact-form-info-title{
-   font-size: 24px;
+.contact-form-info-title{
+    font-size: 24px;
     color: #FFFFFF;
     margin-bottom: 13px;
     text-transform: uppercase;

@@ -331,6 +331,10 @@ body.login-register.hide-account-title .select2-container--open .select2-dropdow
 	color: #fff;
 	min-width: 210px;
 }
+.fl-blue-btn:hover{
+	background: transparent;
+	color: #1A7ABE;
+}
 
 /*slider break fix*/
 
