@@ -280,6 +280,21 @@ google.maps.event.addDomListener(window, 'load', initialize);
     }
   }
 
+  if (windowWidth <= 767) {
+    if( $('.hmRdrSlider').length ){
+      $('.hmRdrSlider').slick({
+        dots: true,
+        infinite: false,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        speed: 700,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      });
+    }
+  }
+
 
   /*start of Sabbir*/
 
