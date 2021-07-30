@@ -19,6 +19,7 @@
     text-transform: uppercase;
     color:#162B39;
     margin-bottom: 50px;
+    line-height:1;
 }
 /*.contact-form-lft .error-msg{
     display: none;
@@ -919,6 +920,7 @@ boek-je-form-sec-wrp
     .contact-form-sec-wrp, 
     .fl-form-sec-wrp{
         margin-bottom:0;
+        padding-top: 35px;
     }
     .contact-form-info-cntlr i.contact-form-info-line-bg {
         bottom: 0;
