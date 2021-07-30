@@ -1,6 +1,7 @@
 .diensten-overview-text-module {
     padding-bottom: 50px;
 }
+
 .dnsten-cta-module-sec{
     margin-bottom:50px;
 }
@@ -149,6 +150,15 @@
     }
     .dnst-text-module {
         padding-top:0px;
+    }
+    .diensten-overview-entry-hdr{
+        padding-top:30px;
+    }
+    .service-sec-grid-item .service-sec-grid-item-title{
+        opacity:1;
+        transform:scale(1);
+        -ms-transform:scale(1);
+        -webkit-transform:scale(1);
     }
 }
 @media(max-width:575px){
