@@ -137,7 +137,9 @@
 	.diensten-detials-related-sec{
 		padding-top: 14px!important;
 	}
-	
+	.dis-overview-text-module{
+	    padding-bottom: 17px;
+	}
 }
 @media(max-width:479px){
     .dnsten-service-sec-grid-item-img{
