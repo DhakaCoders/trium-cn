@@ -31,6 +31,9 @@
 	height: 100%;
 	width: 100%;
 }
+.over-ons-grds-lft-img img{
+	display: none;
+}
 
 .over-ons-lftdes-rgtimg .over-ons-grds-lft{
 	order: 2;
