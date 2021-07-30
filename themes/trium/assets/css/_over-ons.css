@@ -31,6 +31,9 @@
 	height: 100%;
 	width: 100%;
 }
+.over-ons-grds-lft-img img{
+	display: none;
+}
 
 .over-ons-lftdes-rgtimg .over-ons-grds-lft{
 	order: 2;
@@ -356,7 +359,7 @@
 	.over-ons-lookout-sec {
 	    padding-bottom: 50px;
 	}
-	.page-entry-hdr-cntlr.over-ons-page-entry-hdr{
+	.page-entry-hdr-cntlr{
 		padding-top: 30px;
 	}
 	.over-ons-grds-row:nth-child(2n+2) .over-ons-grds-rgt {

@@ -62,7 +62,7 @@
 /* == pagination start design == */
 .fl-pagination-blog-cntrl{
 	padding-top: 56px;
-	border-top: 2px solid #E4E4E4;
+	border-top: 1px solid #E4E4E4;
 }
 .fl-pagination-ctlr ul{
 	display: flex;
@@ -99,6 +99,10 @@
 .fl-pagination-ctlr ul li span.current,
 .fl-pagination-ctlr ul li a:hover{
 	color: #1A7ABE;
+}
+.fl-pagination-ctlr ul li.prev a:hover svg,
+.fl-pagination-ctlr ul li.next a:hover svg{
+	fill: #162B39;
 }
 /* == pagination end design == */
 /*breadcum*/
