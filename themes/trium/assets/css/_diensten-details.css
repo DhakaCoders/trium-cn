@@ -88,7 +88,7 @@
 	padding-bottom:20px;
 }
 .dnsten-service-sec-grid-item-img{
-	height:226px;
+	height:100%;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -99,9 +99,21 @@
 }
 .dnsten-service-sec-grid-item{
     position: relative;
+    height: 226px;
+    display: flex;
+    justify-content: center;
+    align-items: center
 }
 .dnsten-service-sec-grid-item-inner{
 	overflow:hidden;
+	position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index:1;
 }
 .dnsten-service-sec-grid-item:hover .dnsten-service-sec-grid-item-img{
 	transform:scale(1.2);
@@ -109,17 +121,11 @@
 	-webkit-transform:scale(1.2);
 }
 .dnsten-service-sec-grid-item-title{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -webkit-transform: translate(-50%, -50%);
-}
-.dnsten-service-sec-grid-item-title{
-	color:#fff;
-	text-align: center;
-	line-height: 1.2;
+	color: #fff;
+    text-align: center;
+    line-height: 1.2;
+    z-index: 2;
+    position: relative;
 }
 
 
