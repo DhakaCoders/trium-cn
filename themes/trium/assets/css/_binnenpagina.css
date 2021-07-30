@@ -1004,7 +1004,8 @@ hr{
 	.dfp-category-module {
 	    padding-top: 0;
 	}
-	.dfp-cta-module-cntlr .cta-module{
+	.dfp-cta-module-cntlr .cta-module,
+	.cta-module-sec .cta-module{
 		padding-left: 20px;
 		padding-right: 20px;
 	}
