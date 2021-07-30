@@ -429,6 +429,7 @@ body.woocommerce-edit-account .success-msg {
     height: 20px;
     color: transparent !important;
 }
+
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .NameField.wpforms-has-error label.wpforms-error::after{
     margin-top: -38px;
     top: 0;
