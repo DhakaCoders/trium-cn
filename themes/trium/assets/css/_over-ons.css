@@ -186,6 +186,9 @@
 	.over-ons-lookout-logo {
 	    padding-right: 90px;
 	}
+	.over-ons-grds-row:nth-child(2n+2) .over-ons-grds-rgt {
+	    padding-right: 90px;
+	}
 }
 
 @media(max-width: 1199px){
@@ -225,6 +228,9 @@
 	}
 	.over-ons-lookout-sec {
 	    padding-bottom: 70px;
+	}
+	.over-ons-grds-row:nth-child(2n+2) .over-ons-grds-rgt {
+	    padding-right: 60px;
 	}
 }
 
@@ -268,6 +274,9 @@
 	}
 	.over-ons-lookout-sec {
 	    padding-bottom: 60px;
+	}
+	.over-ons-grds-row:nth-child(2n+2) .over-ons-grds-rgt {
+	    padding-right: 30px;
 	}
 }
 
@@ -348,6 +357,9 @@
 	}
 	.page-entry-hdr-cntlr.over-ons{
 		padding-top: 30px;
+	}
+	.over-ons-grds-row:nth-child(2n+2) .over-ons-grds-rgt {
+	    padding-right: 0px;
 	}
 }
 
