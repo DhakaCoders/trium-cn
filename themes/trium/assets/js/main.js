@@ -340,6 +340,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
       dots: false,
       infinite: true,
       autoplay: true,
+      arrows: false,
       autoplaySpeed: 4000,
       speed: 700,
       slidesToShow: 6,

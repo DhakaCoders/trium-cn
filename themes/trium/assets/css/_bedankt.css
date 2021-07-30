@@ -150,6 +150,7 @@
     .bedankt-sec {
         padding-top: 63px;
         padding-bottom: 53px;
+        margin-top: 0;
     }
     .bedankt-massage-icon {
         padding-bottom: 31px;
@@ -177,6 +178,7 @@
     .bedankt-links ul li a{
         font-size: 16px;
     }
+
 }
 @media(max-width: 575px){
     .bedankt-links ul{
