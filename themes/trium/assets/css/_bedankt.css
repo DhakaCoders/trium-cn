@@ -63,3 +63,152 @@
     padding: 14px 15px;
 }
 
+
+
+
+
+/*responsive-start*/
+
+
+@media(max-width: 1699px){
+    .bedankt-sec {
+        padding-top: 74px;
+        padding-bottom: 82px;
+    }
+    
+}
+@media(max-width: 1499px){
+    .bedankt-sec {
+        padding-top: 69px;
+        padding-bottom: 77px;
+    }
+    
+}
+@media(max-width: 1399px){
+
+    .bedankt-sec {
+        padding-top: 64px;
+        padding-bottom: 72px;
+    }
+}
+@media(max-width: 1299px){
+
+    .bedankt-sec {
+        padding-top: 60px;
+        padding-bottom: 70px;
+    }
+}
+@media(max-width: 1199px){
+    .bedankt-sec {
+        padding-top: 55px;
+        padding-bottom: 65px;
+    }
+    .bedankt-massage-icon {
+        padding-bottom: 44px;
+    }
+    .bedankt-heading{
+        margin-bottom: 18px;
+    }
+    .bedankt-dec p {
+        line-height: 1.5;
+        margin-bottom: 23px;
+    }
+    .bedankt-links ul li {
+        padding: 10px 62px;
+    }
+    .bedankt-links {
+        padding-bottom: 23px;
+    }
+
+}
+@media(max-width: 991px){
+    .bedankt-sec {
+        padding-top: 55px;
+        padding-bottom: 65px;
+    }
+    .bedankt-massage-icon {
+        padding-bottom: 40px;
+    }
+    .bedankt-heading {
+        margin-bottom: 16px;
+    }
+    .bedankt-dec p {
+        margin-bottom: 20px;
+    }
+    .bedankt-links ul li {
+        padding: 8px 60px;
+    }
+    
+}
+@media(max-width: 767px){
+    .bedankt-page-content-inner{
+        max-width: 375px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .bedankt-sec {
+        padding-top: 63px;
+        padding-bottom: 53px;
+    }
+    .bedankt-massage-icon {
+        padding-bottom: 31px;
+    }
+    .bedankt-title .bedankt-heading {
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+    /*.bedankt-links ul{
+        display: block;
+    }*/
+    .bedankt-links ul li {
+        padding: 13px 40px;
+    }
+    .bedankt-links {
+        padding-bottom: 40px;
+    }
+    .bedankt-btn a{
+        width: 100%;
+    }
+    .bedankt-dec p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+    .bedankt-links ul li a{
+        font-size: 16px;
+    }
+}
+@media(max-width: 575px){
+    .bedankt-links ul{
+        display: block;
+    }
+    .bedankt-links ul li {
+        padding: 13px 0px;
+    }
+    
+}
+@media(max-width: 479px){
+
+    
+}
+@media(max-width: 359px){
+    .bedankt-title .bedankt-heading{
+        font-size: 26px;
+    }
+    .bedankt-dec p{
+        line-height: 1.5;
+    }
+    .bedankt-dec p {
+        margin-bottom: 16px;
+    }
+    .bedankt-links {
+        padding-bottom: 30px;
+    }
+    .bedankt-sec {
+        padding-top: 50px;
+        padding-bottom: 45px;
+    }
+    
+}
+
+
+/*responsive-end*/
