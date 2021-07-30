@@ -5,7 +5,7 @@
 ------------------
 */
 .border-cntlr .ftr-top{
-    border:none;
+    border-top:none;
 }
 .contact-form-block{
     padding-bottom: 108px;
