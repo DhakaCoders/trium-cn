@@ -263,6 +263,38 @@ google.maps.event.addDomListener(window, 'load', initialize);
     }
   }
 
+  $('.scrollto').on('click', function(e){
+    e.preventDefault();
+    var togo = $(this).data('to');
+    goToByScroll(togo, 0);
+  });
+
+  function goToByScroll(id, offset){
+    if(id){
+      // Remove "link" from the ID
+      id = id.replace("link", "");
+      // Scroll
+      $('html,body').animate(
+        {scrollTop: $(id).offset().top - offset},
+        500);
+    }
+  }
+
+  if (windowWidth <= 767) {
+    if( $('.hmRdrSlider').length ){
+      $('.hmRdrSlider').slick({
+        dots: true,
+        infinite: false,
+        arrows: false,
+        autoplay: true,
+        autoplaySpeed: 4000,
+        speed: 700,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+      });
+    }
+  }
+
 
   /*start of Sabbir*/
 
@@ -323,6 +355,7 @@ google.maps.event.addDomListener(window, 'load', initialize);
       dots: false,
       infinite: true,
       autoplay: true,
+      arrows: false,
       autoplaySpeed: 4000,
       speed: 700,
       slidesToShow: 6,
@@ -348,26 +381,26 @@ google.maps.event.addDomListener(window, 'load', initialize);
             slidesToShow: 3,
             slidesToScroll: 1
           }
-        },
-        {
-          breakpoint: 768,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1
-          }
-        },
-        {
-          breakpoint: 576,
-          settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
-          }
         }
         // You can unslick at a given breakpoint now by adding:
         // settings: "unslick"
         // instead of a settings object
       ]
     });
+  }
+  if (windowWidth <= 767) {
+    if( $('.rdrSlider').length ){
+      $('.rdrSlider').slick({
+        dots: true,
+        infinite: false,
+        autoplay: false,
+        arrows: false,
+        autoplaySpeed: 4000,
+        speed: 700,
+        slidesToShow: 1,
+        slidesToScroll: 1
+      });
+    }
   }
 
 

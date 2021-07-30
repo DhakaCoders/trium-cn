@@ -79,7 +79,8 @@
   </svg>
 
 </head>
-<body>
+<body class="border-cntlr">
+<div class="bdoverlay"></div>
 <header class="header-wrap">
   <div class="header">
     <div class="container">
@@ -88,25 +89,25 @@
           <div class="header-inr clearfix">
             <div class="hdr-lft">
               <div class="logo">
-                <a href="#"><img src="assets/images/logo.png"></a>
+                <a href="#"><img src="assets/images/logo.svg"></a>
               </div>
             </div>
             <div class="hdr-rgt">
               <div class="hdr-topbar">
-                <div class="hdr-top-menu">
+                <div class="hdr-top-menu hide-md">
                   <ul class="clearfix reset-list">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">Over ons</a></li>
                     <li><a href="#">Contact</a></li>
                   </ul>
                 </div>
-                <div class="hdr-lang">
+                <div class="hdr-lang hide-md">
                   <ul class="reset-list">
                     <li class="active"><a href="#">nl</a></li>
                     <li><a href="#">fr</a></li>
                   </ul>
                 </div>
-                <div class="hdr-socials">
+                <div class="hdr-socials hide-md">
                   <ul class="reset-list">
                     <li>
                       <a target="_blank" href="#">
@@ -129,7 +130,7 @@
                 </div>
               </div>
               <div class="hdr-menu">
-                <nav class="main-nav">
+                <nav class="main-nav hide-md">
                   <ul class="clearfix reset-list">
                     <li class="current-menu-item"><a href="#">Inbraakbeveiliging</a></li>
                     <li class="menu-item-has-children">
@@ -145,6 +146,14 @@
                     <li><a href="#">Referentie</a></li>
                   </ul>
                 </nav>
+
+                <div class="hambergar-cntlr show-md">
+                  <div class="hambergar-icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -153,18 +162,92 @@
     </div>
   </div>
   <div class="usp-bar">
-    <div class="usp-bar-cntlr">
-      <ul class="clearfix reset-list">
-        <li>Gratis risicoanalyse</li>
-        <li>Offerte op maat</li>
-        <li>Professionele uitvoering</li>
-        <li>24u/24u Technische bijstand</li>
-      </ul>
+    <div class="usp-bar-cntlr uspBarSlider">
+      <div class="usp-bar-item-cntlr">
+        <span class="usp-bar-item">Gratis risicoanalyse</span>
+      </div>
+      <div class="usp-bar-item-cntlr">
+        <span class="usp-bar-item">Offerte op maat</span>
+      </div>
+      <div class="usp-bar-item-cntlr">
+        <span class="usp-bar-item">Professionele uitvoering</span>
+      </div>
+      <div class="usp-bar-item-cntlr">
+        <span class="usp-bar-item">24u/24u Technische bijstand</span>
+      </div>
     </div>
   </div>
 </header>
 
-<section class="breadcrumb-sec">
+<div class="xs-mobile-menu">
+  <div class="xs-mbl-hdr">
+    <div class="hdr-tel">
+      <a href="tel: +32(0)78/15.80.85">Tel: +32(0)78/15.80.85</a>
+    </div>
+    <div class="hdr-menu">
+      <div class="hambergar-cntlr">
+        <div class="hambergar-icon">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="xs-menu">
+    <nav class="main-nav">
+      <ul class="clearfix reset-list">
+        <li class="current-menu-item"><a href="#">Home</a></li>
+        <li class="menu-item-has-children">
+          <a href="#">Over ons</a>
+          <ul class="sub-menu" style="">
+            <li><a href="#">submenu 1</a></li>
+            <li><a href="#">submenu 2</a></li>
+            <li><a href="#">submenu 3</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Inbraakbeveiliging</a></li>
+        <li><a href="#">Brandbeveiliging</a></li>
+        <li><a href="#">Toegangscontrole</a></li>
+        <li><a href="#">Camerabewaking</a></li>
+        <li><a href="#">Referentie</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+
+  <div class="xs-mbl-btm">
+    <div class="hdr-lang">
+      <ul class="reset-list">
+        <li class="active"><a href="#">nl</a></li>
+        <li><a href="#">fr</a></li>
+      </ul>
+    </div>
+    <div class="hdr-socials">
+      <ul class="reset-list">
+        <li>
+          <a target="_blank" href="#">
+            <i><svg class="facebook-icon" width="24" height="24" viewBox="0 0 24 24" fill="#899EAC">
+              <use xlink:href="#facebook-icon"></use> </svg>
+            </i>
+          </a>
+        </li>
+        <li>
+          <a target="_blank" href="#">
+            <i><svg class="linkdin-icon" width="24" height="24" viewBox="0 0 24 24" fill="#899EAC">
+              <use xlink:href="#linkdin-icon"></use> </svg>
+            </i>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+  
+</div>
+
+<section class="breadcrumb-sec hide-sm">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
@@ -263,6 +346,7 @@
                 <div class="dfp-service-module-inr">
                   <div class="dfp-grd-entry-hdr">
                     <h2 class="fl-h2">Diensten (h2)</h2>
+                    <p class="show-sm">In purus donec porttitor aliquam. Fusce a rutrum pellentesque ut. Duis auctor scelerisque aenean tortor.</p>
                   </div>
                   <div class="dfp-service-grds clearfix">
                     <div class="dfp-service-grd-item">
@@ -307,11 +391,13 @@
     <div class="block">
       <div class="dfp-text-module">
         <div class="container">
-          <div class="col-md-12">
-            <div class="block-850">
-              <h2 class="fl-h2">Netus etiam rhoncus at. (h2)</h2>
-              <p>In purus donec porttitor aliquam. Fusce a rutrum pellentesque ut. Duis auctor scelerisque aenean tortor.</p> 
-              <p>Pulvinar cras ut faucibus faucibus nibh. Ut pharetra, quis massa, tellus tellus egestas. Eu at lacus, lorem facilisi at. Ultricies maecenas mollis morbi porttitor aliquam condimentum euismod sagittis. Arcu, adipiscing quisque amet etiam duis maecenas adipiscing tortor donec. </p>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="block-850">
+                <h2 class="fl-h2">Netus etiam rhoncus at. (h2)</h2>
+                <p>In purus donec porttitor aliquam. Fusce a rutrum pellentesque ut. Duis auctor scelerisque aenean tortor.</p> 
+                <p>Pulvinar cras ut faucibus faucibus nibh. Ut pharetra, quis massa, tellus tellus egestas. Eu at lacus, lorem facilisi at. Ultricies maecenas mollis morbi porttitor aliquam condimentum euismod sagittis. Arcu, adipiscing quisque amet etiam duis maecenas adipiscing tortor donec. </p>
+              </div>
             </div>
           </div>
         </div>
@@ -389,7 +475,7 @@
           <div class="fl-sec-entry-hdr">
             <h2 class="fl-h2">Referentie (h2)</h2>
           </div>
-          <div class="referenties-detials-related-grds clearfix">
+          <div class="referenties-detials-related-grds rdrSlider clearfix">
             <div class="referenties-detials-related-grd-item">
               <div class="blog-grid-item">                
                 <div class="blog-grid-img">                    
@@ -466,7 +552,7 @@
       <div class="col-md-12">
         <div class="footer-cntlr">
           <div class="ftr-top clearfix">
-            <div class="ftr-top-col ftr-top-col-01">
+            <div class="ftr-col ftr-col-01">
               <div class="ftr-logo">
                 <div class="ftr-lg-logo">
                   <a href="#">
@@ -480,8 +566,8 @@
                 </div>
               </div>
             </div>
-            <div class="ftr-top-col ftr-top-col-02">
-              <div class="ftr-top-col-menu">
+            <div class="ftr-col ftr-col-02">
+              <div class="ftr-col-menu">
                 <ul class="reset-list">
                   <li><a href="#">Home</a></li>
                   <li><a href="#">Over ons</a></li>
@@ -497,23 +583,36 @@
                 </ul>
 
               </div>
+
+              <div class="ftr-xs-col-menu show-sm">
+                <ul class="reset-list">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Over ons</a></li>
+                  <li><a href="#">Inbraakbeveiliging</a></li>
+                  <li><a href="#">Brandbeveiliging</a></li>
+                  <li><a href="#">Toegangscontrole</a></li>
+                  <li><a href="#">Camerabewaking</a></li>
+                  <li><a href="#">Referentie</a></li>
+                  <li><a href="#">Contact</a></li>
+              </div>
             </div>
-            <div class="ftr-top-col ftr-top-col-03">
-              <div class="ftr-top-col-desc">
-                <div class="ftr-top-addr">
+            <div class="ftr-col ftr-col-03 hide-sm">
+              <div class="ftr-col-desc">
+                <div class="ftr-addr">
                   <a target="_blank" href="#">Herseltsesteenweg 72,<br> B3200 Aarschot</a>
                 </div>
-                <div class="ftr-top-tel">
-                  <a href="tel: +32(0)78/15.80.85"> Phone: +32(0)78/15.80.85</a>
+                <div class="ftr-tel">
+                  <span> Phone: <a href="tel: +32(0)78/15.80.85">+32(0)78/15.80.85</a></span>
                 </div>
-                <div class="ftr-top-fax">
-                  <a href="fax: +32(0)16/57.00.21"> Fax: +32(0)16/57.00.21</a>
+                <div class="ftr-fax">
+                  <span> Fax: <a href="fax: +32(0)16/57.00.21">+32(0)16/57.00.21</a></span>
+                  
                 </div>
-                <div class="ftr-top-mail">
+                <div class="ftr-mail">
                   <a href="mailto: info@trium.be">info@trium.be</a>
                 </div>
-                <div class="ftr-top-be">
-                  <a href="be: 000 0000 000">BE 000 0000 000</a>
+                <div class="ftr-be-code">
+                  <span>BE 000 0000 000</span>
                 </div>
 
               </div>

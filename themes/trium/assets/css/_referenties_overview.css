@@ -171,12 +171,8 @@ a.fl-read-more-btn{
 	.blog-grids-cntrl{
 		padding-bottom: 52px;
 	}
-	.blog-grid-items ul li{
-		padding: 0 8px 63px!important;
-		width: 50%!important;
-	}
 	.blog-grid-img{
-		height: 450px;
+		height: 400px;
 	}
 	.blog-grid-des{
 		padding-top: 34px;
@@ -220,6 +216,10 @@ a.fl-read-more-btn{
 	}
 	.fl-pagination-blog-cntrl{
 		padding-top: 51px;
+	}
+	.blog-grid-items ul li{
+		padding: 0 8px 63px!important;
+		width: 50%!important;
 	}
 }
 

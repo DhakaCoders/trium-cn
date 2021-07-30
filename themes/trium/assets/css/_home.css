@@ -38,7 +38,7 @@
 	background: #fff;
 }
 .downAnimate:after{
-	animation: downAnimate 1.5s linear infinite;
+	animation: downAnimate 2s linear infinite;
 }
 @keyframes downAnimate{
 	0%{
@@ -146,78 +146,14 @@
 	color: #fff;
 }
 
-.breadcrumb-sec {
-    margin-bottom: 40px;
+.home .service-sec{
+	margin-bottom: 0;
 }
-.breadcrumb-cntlr {
-    padding: 30px 0;
+.home .referenties-detials-related-sec{
+	padding-bottom: 60px;
+	padding-top: 90px;
 }
-.breadcrumb-cntlr ul {
-    display: flex;
-    align-items: center;
-    margin: 0 -20px;
-}
-.breadcrumb-cntlr ul li {
-    padding: 0 20px;
-    position: relative;
-}
-.breadcrumb-cntlr ul li:after {
-    position: absolute;
-    content: "";
-    right: 0;
-    top: 50%;
-    transform: translate(50%,-50%);
-    -ms-transform: translate(50%,-50%);
-    -webkit-transform: translate(50%,-50%);
-    -o-transform: translate(50%,-50%);
-    height: 8px;
-    width: 6px;
-    margin-top: 2px;
-    background-size: contain;
-    background-image: url(../images/right-arrow.svg);
-}
-.breadcrumb-cntlr ul li:last-child:after{
-	display: none;
-}
-.breadcrumb-cntlr ul li a {
-    position: relative;
-}
-.breadcrumb-cntlr ul li.home a,
-.breadcrumb-cntlr ul li:first-child a{
-	padding-left: 30px;
-}
-.breadcrumb-cntlr ul li.home a:after,
-.breadcrumb-cntlr ul li:first-child a:after{
-	position: absolute;
-    content: "";
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    height: 18px;
-    width: 17px;
-    margin-top: -1px;
-    background-size: contain;
-    background-image: url(../images/home-icon.svg);
-}
-.breadcrumb-cntlr ul li a, 
-.breadcrumb-cntlr ul li span, 
-.breadcrumb-cntlr ul li a span {
-	display: inline-block;
-	font-weight: 700;
-	font-size: 12px;
-	text-transform: capitalize;
-	line-height: 1;
-	letter-spacing: 0.02em;
-	color: #899EAC;
-}
-.breadcrumb-cntlr ul li a:hover, 
-.breadcrumb-cntlr ul li span:hover, 
-.breadcrumb-cntlr ul li a span:hover {
-    color: #1A7ABE;
-}
+
 /*responsive*/
 @media(max-width: 1699px){
 	.hm-banner-cntlr{
@@ -313,6 +249,33 @@
 	}
 	.lftimg-rgtdesc-mudl-title.fl-h2{
 		margin-bottom: 25px;
+	}
+
+	.referenties-detials-related-grd-item{
+		display: none;
+	}
+	.referenties-detials-related-grd-item:first-of-type{
+		display: block;
+	}
+	.hmRdrSlider.slick-initialized .referenties-detials-related-grd-item{
+		display: block;
+	}
+	.home .referenties-detials-related-grd-item{
+		margin-bottom: 20px;
+	}
+	.home .referenties-detials-related-sec{
+		padding-bottom: 70px;
+	}
+	.blog-grid-item{
+		max-width: 400px;
+		width: 100%;
+		margin: 0 auto;
+	}
+	.home .blog-grid-des{
+		text-align: center;
+	}
+	.home .blog-grid-img{
+		height: 420px;
 	}
 }
 @media(max-width: 639px){

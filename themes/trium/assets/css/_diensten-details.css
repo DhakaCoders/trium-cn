@@ -1,3 +1,4 @@
+
 .dinst-dtls-grds-sec{
 	padding-bottom:20px;
 }
@@ -36,13 +37,15 @@
 .hide{
     display: none;
 }
-
+.dis-overview-text-module{
+	padding-bottom:30px;
+}
 
 .dnsten-service-sec{
 	padding-top:100px;
 }
 .dnsten-service-sec-cntlr {
-    padding-bottom: 110px;
+    padding-bottom: 90px;
     border-bottom: 1px solid #E4E4E4;
 }
 .dnsten-service-sec-title{
@@ -54,10 +57,12 @@
 .dnsten-service-sec-cntlr ul{
     display: flex;
     margin:0 -12px;
+    flex-wrap: wrap;
 }
 .dnsten-service-sec-cntlr ul li{
 	width:33.33%;
 	padding:0 12px;
+	padding-bottom:20px;
 }
 .dnsten-service-sec-grid-item-img{
 	height:226px;
@@ -82,22 +87,62 @@
 
 }
 @media(max-width:1199px){
-
+	.dnsten-service-sec {
+	    padding-top: 70px;
+	}
+	.dnsten-service-sec-cntlr{
+		padding-bottom:70px;
+	}
 }
 @media(max-width:991px){
-
+	
 
 }
 @media(max-width:767px){
-
-
+	.dnsten-service-sec-cntlr ul li{
+		padding:0 8px;
+		padding-bottom:16px;
+		width:50%;
+	}
+	.dnsten-service-sec-cntlr ul{
+	    margin: 0 -8px;
+	}
+	.dnsten-service-sec-grid-item-img{
+		height:200px;
+	}
+	.dnsten-service-sec{
+	    padding-top: 60px;
+	}
+	.dnsten-service-sec-cntlr{
+		padding-bottom:70px;
+	}
 }
-@media(max-width:991px){
-
-}
-@media(max-width:475px){
-
+@media(max-width:575px){
+	.diensten-filterbar .diensten-filter{
+		justify-content:center;
+	}
+	.diensten-filterbar {
+	    padding-top: 58px;
+	}
+	.dnsten-dtls-tab-item{
+	    padding-bottom: 50px;
+	}
+	.dnsten-service-sec-cntlr ul li{
+		width:100%;
+	}
+	.dnsten-service-sec-cntlr{
+	    padding-bottom: 30px;
+	    border:none;
+	}
+	.referenties-detials-related-sec.diensten-detials-related-sec{
+		padding-top: 14px!important;
+	}
+	.dis-overview-text-module{
+	    padding-bottom: 17px;
+	}
 }
 @media(max-width:479px){
-    
+    .dnsten-service-sec-grid-item-img{
+		height:184px;
+	}
 }

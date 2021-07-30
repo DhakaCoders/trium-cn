@@ -19,6 +19,7 @@
     text-transform: uppercase;
     color:#162B39;
     margin-bottom: 50px;
+    line-height:1;
 }
 /*.contact-form-lft .error-msg{
     display: none;
@@ -490,6 +491,7 @@ Contact info
 
 .contact-form-info-cntlr {
     padding: 60px 54px 60px 54px;
+    margin-top: 5px; 
     background: #162B39;
     position: relative;
 }
@@ -747,6 +749,7 @@ boek-je-form-sec-wrp
         right: -30px;
     }
 
+
 }
 
 @media(max-width: 1199px){
@@ -786,6 +789,12 @@ boek-je-form-sec-wrp
     .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field{
         margin-bottom:22px;
     }
+    .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-textarea textarea{
+        height:250px;
+    }
+    .contact-form-info ul li span, .contact-form-info ul li a{
+        font-size: 16px;
+    }
 }
 
 @media(max-width: 991px){
@@ -799,9 +808,6 @@ boek-je-form-sec-wrp
     }
 	.contact-form-rgt{
         width: 36%;
-    }
-	.contact-form-info-cntlr{
-        padding: 35px 14px 35px 20px;
     }
 	.contact-parachute-icon{
 	    right: -15px;
@@ -826,11 +832,11 @@ boek-je-form-sec-wrp
         bottom: -1px;
         left: -3px;
     }
+    .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-textarea textarea{
+        height:200px;
+    }
 }
 @media(max-width:830px){
-    .contact-form-info-cntlr{
-        padding: 35px 15px 35px 20px;
-    }
     .contact-form-lft{
         width: 63%;
     }
@@ -841,10 +847,10 @@ boek-je-form-sec-wrp
         width:16px;
         height:auto;
     }
-    .contact-form-info ul li span, .contact-form-info ul li a{
-        font-size:14px;
+    .contact-form-info-cntlr {
+        padding: 55px 35px 55px 35px;
     }
-    
+        
 }
 @media(max-width: 767px){
 	.contact-google-map-sec-wrp{
@@ -856,8 +862,11 @@ boek-je-form-sec-wrp
 	}
 	.contact-form-rgt{
 	    width: 100%;
-        margin-bottom:39px;
+        margin-bottom:0px;
 	}
+    .contact-form-block {
+        padding-bottom:27px;
+    }
 	.contact-google-parachute,
 	.contact-parachute-icon{
 		display: none;
@@ -869,9 +878,6 @@ boek-je-form-sec-wrp
 	}
 	.contact-form-info-socail {
 	    padding-top: 20px;
-	}
-	.contact-google-map{
-		margin: 0 -20px -10px;
 	}
 	.boek-je-form-sec-wrp .contact-form-lft{
 		padding-bottom: 48px;
@@ -914,9 +920,7 @@ boek-je-form-sec-wrp
     .contact-form-sec-wrp, 
     .fl-form-sec-wrp{
         margin-bottom:0;
-    }
-    .contact-form-info ul li:nth-child(1){
-        padding-bottom: 10px;
+        padding-top: 35px;
     }
     .contact-form-info-cntlr i.contact-form-info-line-bg {
         bottom: 0;
@@ -931,6 +935,9 @@ boek-je-form-sec-wrp
     }
     .bootstrap-select .dropdown-menu li a{
         font-size:13px;
+    }
+    .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-textarea textarea{
+        height:187px;
     }
 }
 
@@ -949,11 +956,11 @@ boek-je-form-sec-wrp
 	}
 	.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field {
 	    width: 100%;
-	    margin-bottom: 23px;
+	    margin-bottom: 18px;
 	}
 	.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field.NameField {
 	    padding-top: 0;
-	    margin-top: -5px;
+	    margin-top: -2px;
 	}
 	.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field label{
 	    line-height: 1;
@@ -971,7 +978,7 @@ boek-je-form-sec-wrp
     	font-size: 18px;
     }
     .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-description p{
-        text-align: center;
+        text-align: left;
     }
     .contact-form-sec-wrp .fl-select-cntlr .select2-container--default .select2-selection--single .select2-selection__arrow,
     #billing_country_field .select2-container--default .select2-selection--single .select2-selection__arrow{
@@ -980,6 +987,9 @@ boek-je-form-sec-wrp
     .error-msg span i,
     .woocommerce-info:before{
         left: 15px!important;
+    }
+    .contact-form-info-cntlr {
+        padding: 53px 64px 50px 64px;
     }
 }
 
