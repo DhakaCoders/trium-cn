@@ -13,8 +13,10 @@
     <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->	
-
-  <svg style="display: none;">
+<?php wp_head(); ?>
+</head>
+<body <?php body_class(); ?>>
+    <svg style="display: none;">
     <!-- <svg class="id-name" width="16" height="16" viewBox="0 0 16 16" fill="#FF5C26">
       <use xlink:href="#id-name"></use> </svg> -->
 
@@ -57,9 +59,8 @@
     </symbol>
 
   </svg>
-<?php wp_head(); ?>
-</head>
-<body <?php body_class(); ?>>
+
+  
   <div class="bdoverlay"></div>
   <div class="page-body-cntlr">
     <header class="header-wrap">
