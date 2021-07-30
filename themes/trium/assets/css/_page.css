@@ -183,9 +183,7 @@
 .cta-module-btn a:hover{
 	background:#fff;
 }
-.cta-module{
-	padding-top:100px;
-}
+
 @media (max-width: 1699px) {
 	.fl-pagination-ctlr ul{
 		margin: 0 -17px;
