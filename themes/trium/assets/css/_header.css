@@ -178,6 +178,7 @@ nav.main-nav > ul > li > a{
 }
 nav.main-nav > ul > li > a:after{
 	position: absolute;
+	content: "";
 	opacity: 0;
 	left: 50%;
 	top: 50%;
@@ -196,7 +197,7 @@ nav.main-nav > ul > li > a:after{
 nav.main-nav > ul > li.menu-item-has-children:hover a:after,
 nav.main-nav > ul > li.current-menu-item > a:after,
 nav.main-nav > ul > li > a:hover:after{
-	content: "";
+	
 	opacity: 1;
 	transition: all 0.5s;
 	-ms-transition: all 0.5s;
