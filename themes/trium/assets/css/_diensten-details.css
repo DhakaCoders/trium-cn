@@ -1,6 +1,4 @@
-header,footer,.dinst-dtls-grds-sec{
-	overflow: hidden;
-}
+
 .dinst-dtls-grds-sec{
 	padding-bottom:20px;
 }
@@ -39,7 +37,9 @@ header,footer,.dinst-dtls-grds-sec{
 .hide{
     display: none;
 }
-
+.dis-overview-text-module{
+	padding-bottom:30px;
+}
 
 .dnsten-service-sec{
 	padding-top:100px;
