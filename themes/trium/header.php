@@ -70,7 +70,7 @@
               <div class="header-inr clearfix">
                 <div class="hdr-lft">
                   <div class="logo">
-                    <a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/logo.png"></a>
+                    <a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/logo.svg"></a>
                   </div>
                 </div>
                 <div class="hdr-rgt">
@@ -177,7 +177,7 @@
       </div>
 
       <div class="xs-menu">
-        <nav class="main-nav hide-md">
+        <nav class="main-nav">
           <ul class="clearfix reset-list">
             <li class="current-menu-item"><a href="#">Home</a></li>
             <li class="menu-item-has-children">
