@@ -303,9 +303,9 @@ body.woocommerce-edit-account .success-msg {
     font-family: 'Oswald', sans-serif
 }
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-submit-container button:hover{
-	background: #162B39 !important;
+	background: #000000 !important;
 	color: #fff !important;
-	border-color: #162B39 !important;
+	border-color: #000000 !important;
 	transition: all 0.5s;
 	-ms-transition: all 0.5s;
 	-webkit-transition: all 0.5s;
@@ -322,7 +322,7 @@ body.woocommerce-edit-account .success-msg {
     text-decoration: underline;
 }
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-description p a:hover{
-	color: #162B39;
+	color: #1A7ABE;
     text-decoration: none;
 }
 .contact-form-wrp .wpforms-container .wpforms-form .form-privacy-text{

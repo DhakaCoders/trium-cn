@@ -63,7 +63,7 @@ $mapcode = get_field('mapcode', $thisID);
           <div class="contact-form-rgt">
             <div class="contact-form-info-cntlr">
               <div class="contact-form-info">
-              <?php if( !empty($continfo['titel']) ) printf( '<h6 class="fl-h6 contact-form-info-title">%s</h6>', $continfo['titel']); ?>
+              <?php if( !empty($continfo['titel']) ) printf( '<h2 class="fl-h4 contact-form-info-title">%s</h2>', $continfo['titel']); ?>
                 <ul class="reset-list clearfix">
                 <?php 
                   if( !empty($continfo['adres']) ) {
