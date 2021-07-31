@@ -53,29 +53,26 @@ $mapcode = get_field('mapcode', $thisID);
         <?php 
           $adres = get_field('adres', 'options');
           $url = get_field('url', 'options');
+          $gmaplink = !empty($url)?$url: 'javascript:void()';
           $telefoon = get_field('telefoon', 'options');
           $fax = get_field('fax', 'options');
+          $btw = get_field('btw', 'options');
           $email = get_field('emailadres', 'options');
           $continfo = get_field('contactinfo', $thisID);
         ?>
           <div class="contact-form-rgt">
             <div class="contact-form-info-cntlr">
               <div class="contact-form-info">
-              <h6 class="fl-h6 contact-form-info-title">Contact Info</h6>
+              <?php if( !empty($continfo['titel']) ) printf( '<h6 class="fl-h6 contact-form-info-title">%s</h6>', $continfo['titel']); ?>
                 <ul class="reset-list clearfix">
-                  <li>
-                    <a href="#" target="_blank">Herseltsesteenweg 72,<br>B3200 Aarschot</a>
-                  </li>
-                  <li>
-                    <span>Phone: <a href="tel:+32(0)78/15.80.85">+32(0)78/15.80.85</a></span>
-                  </li>
-                  <li>
-                    <span>Fax:<a href="tel:+32(0)16/57.00.21">+32(0)16/57.00.21</a></span>
-                  </li>
-                  <li>
-                    <span>E-mail: <a href="mailto:info@trium.be">info@trium.be</a></span>
-                  </li>
                 <?php 
+                  if( !empty($continfo['adres']) ) {
+                    $contmaplink = !empty($continfo['url'])?$continfo['url']: 'javascript:void()';
+                    printf('<li><a href="%s" target="_blank">%s</a></li>', $contmaplink, $continfo['adres']);
+                  }
+                  else{
+                    if( !empty($adres) ) printf('<li><a href="%s" target="_blank">%s</a></li>', $gmaplink, $adres);
+                  }
                   if(!empty($continfo['telefoon'])){
                     printf('<li><span>Phone: <a href="tel:%s">%s</a></span></li>', phone_preg($continfo['telefoon']),  $continfo['telefoon']);
                   }else{
@@ -91,10 +88,8 @@ $mapcode = get_field('mapcode', $thisID);
                   }else{
                     if( !empty($email) ) printf('<li><span><a href="mailto:%s">%s</a></span></li>', $email, $email);
                   }
+                  if( !empty($btw) ) printf('<li><span>%s</span></li>', $btw);
               ?>
-                  <li>
-                    <span>BE 000 0000 000</span>
-                  </li>
                 </ul>
               </div>
             </div>
