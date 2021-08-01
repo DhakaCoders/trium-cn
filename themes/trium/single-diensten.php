@@ -166,50 +166,57 @@ if($tabs){
   </section>
 <?php } ?>
 <?php } ?>
+
+<?php 
+$showhidedien = get_field('showhidedien', $thisID);
+if($showhidedien){
+$dissec = get_field('dienstensec', $thisID);
+$disobj = $dissec['selecteer_diensten'];
+
+if( empty($disobj) ){
+  $disobj = get_posts( array(
+      'post_type' => 'diensten',
+      'posts_per_page'=> 3,
+      'orderby' => 'date',
+      'order'=> 'desc',
+
+    ) );
+}
+?>
 <section class="dnsten-service-sec">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
         <div class="dnsten-service-sec-cntlr">
           <div class="page-entry-hdr dnsten-service-sec-title">
-            <h1 class="fl-h2">Diensten (h2)</h1>
+            <h2 class="fl-h2"><?php echo !empty($dissec['titel'])? $dissec['titel']:__('Diensten', 'trium'); ?></h2>
           </div>
+          <?php if($disobj){ ?>
           <ul class="reset-list ulc">
+          <?php 
+            foreach( $disobj as $dis ) {
+            global $post;
+            $imgID = get_post_thumbnail_id($dis->ID);
+            $imgknop = !empty($imgID)? cbv_get_image_src($imgID): referenties_placeholder(); 
+          ?>
             <li>
               <div class="dnsten-service-sec-grid-item">
-                <a href="#" class="overlay-link"></a>
+                <a href="<?php echo get_permalink($dis->ID); ?>" class="overlay-link"></a>
                 <div class="dnsten-service-sec-grid-item-inner">
-                  <div class="dnsten-service-sec-grid-item-img inline-bg" style="background:url(<?php echo THEME_URI; ?>/assets/images/diensten-services.jpg);"></div>
+                  <div class="dnsten-service-sec-grid-item-img inline-bg" style="background:url(<?php echo $imgknop; ?>);"></div>
                 </div>
-                  <h3 class="dnsten-service-sec-grid-item-title fl-h3">Inbraakdetectie <br>(h3)</h3>
+                  <h3 class="dnsten-service-sec-grid-item-title fl-h3"><?php echo $dis->post_title; ?></h3>
                 </div>
             </li>
-            <li>
-              <div class="dnsten-service-sec-grid-item">
-                <a href="#" class="overlay-link"></a>
-                <div class="dnsten-service-sec-grid-item-inner">
-                  <div class="dnsten-service-sec-grid-item-img inline-bg" style="background:url(<?php echo THEME_URI; ?>/assets/images/diensten-services.jpg);">
-                  </div>
-                </div>
-                  <h3 class="dnsten-service-sec-grid-item-title fl-h3">Brand- en gasdetectie</h3>
-                </div>
-            </li>
-            <li>
-              <div class="dnsten-service-sec-grid-item">
-                <a href="#" class="overlay-link"></a>
-                <div class="dnsten-service-sec-grid-item-inner">
-                  <div class="dnsten-service-sec-grid-item-img inline-bg" style="background:url(<?php echo THEME_URI; ?>/assets/images/diensten-services.jpg);">
-                  </div>
-                </div>
-                  <h3 class="dnsten-service-sec-grid-item-title fl-h3">Toegangs- en <br>tijdsregistratie</h3>
-              </div>
-            </li>
+            <?php } ?>
           </ul>
+          <?php } ?>
         </div>
       </div>
     </div>
   </div>
 </section>
+<?php } ?>
 <?php 
 $showhiderefer = get_field('showhiderefer', $thisID);
 if($showhiderefer){
@@ -232,7 +239,8 @@ if( empty($refobj) ){
       <div class="col-md-12">
         <div class="referenties-detials-related-sec-inr">
           <div class="fl-sec-entry-hdr">
-            <?php if( !empty($clientsec['titel']) ) printf('<h2 class="fl-h2">%s</h2>', $clientsec['titel']); ?>
+            <h2 class="fl-h2"><?php echo !empty($clientsec['titel'])? $clientsec['titel']:__('Referentie', 'trium'); ?></h2>
+            
           </div>
           <?php if($refobj){ ?>
           <div class="referenties-detials-related-grds clearfix">
