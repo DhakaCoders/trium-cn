@@ -366,8 +366,95 @@ body.woocommerce-edit-account .success-msg {
 	color: #e48aa4;
 }
 
+/* Contact Form radio css*/
 
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field ul.wpforms-field-required{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field ul.wpforms-field-required li{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    margin: 0;
+    position: relative;
+    margin-bottom: 10px!important;
+}
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field ul.wpforms-field-required li:last-child{
+    margin-bottom:0!important;
+}
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field ul.wpforms-field-required li:before{
+    content: none!important;
+}
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field ul.wpforms-field-required li label{
+    margin-bottom: 0;
+    color: #777F84;
+    font-weight: 400;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    padding-left:29px!important;
+    position:relative;
+}
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field input[type=radio],
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field input[type=checkbox]{
+    display:none;
+}
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field.wpforms-field-radio ul.wpforms-field-required li label:before{
+    content: "";
+    width: 18px;
+    height: 18px;
+    border: 1px solid #BFBFBF;
+    position: absolute;
+    left: 0;
+    border-radius: 50%;
+    top:2px;
+}
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field.wpforms-field-radio ul.wpforms-field-required li input:checked + label:before{
+    border-color:#1A7ABE;
+}
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field.wpforms-field-radio ul.wpforms-field-required li label:after{
+    width: 10px;
+    height: 10px;
+    background: #1A7ABE;
+    position: absolute;
+    left: 4px;
+    border-radius: 50%;
+    top: 6px;
+}
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field.wpforms-field-radio ul.wpforms-field-required li input:checked + label:after{
+    content: "";
+}
 
+/* Contact Form  checkbox css*/
+
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field.wpforms-field-checkbox ul.wpforms-field-required li label:before{
+    content:"";
+    position: absolute;
+    left: 0;
+    top:2px;
+    width:18px;
+    height:18px;
+    border: 1px solid #BFBFBF;
+    border-radius:3px;
+}
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field.wpforms-field-checkbox ul.wpforms-field-required li label:after{
+    background: url(../images/contact-checkbox.png);
+    position: absolute;
+    left: 0px;
+    width: 18px;
+    height: 18px;
+    background-repeat: no-repeat;
+    background-position:center;
+    top: 2px;
+}
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field.wpforms-field-checkbox ul.wpforms-field-required li input:checked + label:after{
+    content: "";
+}
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field.wpforms-field-checkbox ul.wpforms-field-required li input:checked + label:before{
+    background: #1A7ABE;
+    border: 1px solid #1A7ABE;
+}
 
 /*
 ------------------
