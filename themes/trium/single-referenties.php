@@ -1,8 +1,7 @@
 <?php 
 get_header(); 
 $thisID = get_the_ID();
-$custom_titel = get_field('custom_titel', $thisID);
-$page_title = !empty($custom_titel) ? $custom_titel : get_the_title();
+$posttitle = get_the_title();
 ?>
 <section class="breadcrumb-sec hide-sm">
   <div class="container">
@@ -40,7 +39,7 @@ $page_title = !empty($custom_titel) ? $custom_titel : get_the_title();
               <div class="block-850">
                 <div class="back-btn">
                   <a href="javascript:history.go(-1)">
-                    Terug naar overzicht
+                    <?php _e('Terug naar overzicht', 'trium'); ?>
                     <i>
                       <svg class="back-btn-svg" width="11" height="18" viewBox="0 0 11 18" fill="#1A7ABE">
                         <use xlink:href="#back-btn-svg"></use> 
@@ -55,6 +54,35 @@ $page_title = !empty($custom_titel) ? $custom_titel : get_the_title();
       </div>
     </div>
     <?php if( have_rows('inhoud_ref') ){ ?>
+      <?php 
+        $fctitle = '';
+         $i = 1; 
+          while ( have_rows('inhoud_ref') ) : the_row(); 
+            if( $i == 1 && get_row_layout() == 'koptekst' ){ 
+              $fctitle = get_sub_field('fc_titel');
+            } 
+            $i++; 
+          endwhile;
+      ?>
+      <?php if( empty($fctitle) ): ?>
+      <div class="block">
+        <div class="dfp-promo-module">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="block-850">
+                  <div class="dfp-promo-module-des">
+                    <?php 
+                      if( !empty($posttitle) ) printf('<strong class="dfp-promo-module-title fl-h1">%s</strong>', $posttitle );  
+                    ?>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <?php endif; ?>
     <?php while ( have_rows('inhoud_ref') ) : the_row();  ?>
       <?php if( get_row_layout() == 'koptekst' ){ 
         $fc_titel = get_sub_field('fc_titel');
@@ -111,6 +139,8 @@ $page_title = !empty($custom_titel) ? $custom_titel : get_the_title();
         </div>
       </div>
       <?php }elseif( get_row_layout() == 'diensten' ){ 
+          $fc_titel = get_sub_field('fc_titel');
+          $fc_tekst = get_sub_field('fc_tekst');
           $dieobj = get_sub_field('selecteer_diensten');
           if( empty($dieobj) ){
               $dieobj = get_posts( array(
@@ -132,9 +162,9 @@ $page_title = !empty($custom_titel) ? $custom_titel : get_the_title();
                   <div class="dfp-service-module-inr">
                     <div class="dfp-grd-entry-hdr">
                       <h2 class="fl-h2">
-                        <?php echo !empty($clientsec['titel'])? $clientsec['titel']:__('Diensten', 'trium'); ?>
+                        <?php echo !empty($fc_titel)? $fc_titel:__('Diensten', 'trium'); ?>
                       </h2>
-                      <p class="show-sm">In purus donec porttitor aliquam. Fusce a rutrum pellentesque ut. Duis auctor scelerisque aenean tortor.</p>
+                      <?php if(!empty($fc_tekst)) printf('<p class="show-sm">%s</p>', $fc_tekst); ?>
                     </div>
                     <div class="dfp-service-grds clearfix">
                       <?php 
@@ -161,6 +191,7 @@ $page_title = !empty($custom_titel) ? $custom_titel : get_the_title();
           </div>
         </div>
       </div>
+      <?php endif; ?>
       <?php }elseif( get_row_layout() == 'cta' ){ 
         $fc_titel = get_sub_field('fc_titel');
         $fc_tekst = get_sub_field('fc_tekst');
@@ -236,80 +267,63 @@ $page_title = !empty($custom_titel) ? $custom_titel : get_the_title();
   </article>
 </section>
 
-
+<?php 
+$refer_rel = get_field('refrenties_rel', $thisID);
+if($refer_rel){
+$refobj = $refer_rel['selecteer_referenties'];
+if( empty($refobj) ){
+  $refobj = get_posts( array(
+      'post_type' => 'referenties',
+      'posts_per_page'=> 3,
+      'orderby' => 'date',
+      'order'=> 'desc',
+      'post__not_in' => array($thisID),
+    ) );
+}
+?>
 <section class="referenties-detials-related-sec">
   <div class="container">
     <div class="row">
       <div class="col-md-12">
         <div class="referenties-detials-related-sec-inr">
           <div class="fl-sec-entry-hdr">
-            <h2 class="fl-h2">Referentie (h2)</h2>
+            <h2 class="fl-h2"><?php echo !empty($refer_rel['titel'])? $refer_rel['titel']:__('Referentie', 'trium'); ?></h2>
           </div>
+          <?php if($refobj){ ?>
           <div class="referenties-detials-related-grds rdrSlider clearfix">
+            <?php 
+              foreach( $refobj as $ref ) {
+              global $post;
+              $imgID = get_post_thumbnail_id($ref->ID);
+              $imgknop = !empty($imgID)? cbv_get_image_src($imgID): referenties_placeholder(); 
+            ?>
             <div class="referenties-detials-related-grd-item">
               <div class="blog-grid-item">                
                 <div class="blog-grid-img">                    
-                  <a href="#" class="overlay-link"></a>
-                  <div class="bgi-img inline-bg" style="background-image: url('assets/images/grid-img-1.jpg');">                  
+                  <a href="<?php echo get_permalink($ref->ID); ?>" class="overlay-link"></a>
+                  <div class="bgi-img inline-bg" style="background-image: url('<?php echo $imgknop; ?>');">                  
                   </div>
                 </div>  
                 <div class="blog-grid-des mHc">
                   <div class="blog-grid-des-inner">                                     
-                    <h2 class="fl-h3 bgi-title mHc1"><a href="#">Project titel (h2)</a></h2>                      
+                    <h2 class="fl-h3 bgi-title mHc1"><a href="<?php echo get_permalink($ref->ID); ?>"><?php echo $ref->post_title; ?></a></h2>                      
                     <div class="bgi-des mHc2">
-                      <p>Eu at lacus, lorem facilisi at. Ultricies maecenas mollis morbi porttitor aliquam condimentum euismod sagittis.</p>
+                      <?php echo wpautop($ref->post_excerpt); ?>
                     </div>    
                     <div class="fl-pro-grd-btn fl-btn-absolute">
-                      <a class="fl-read-more-btn" href="#">meer info</a>
+                      <a class="fl-read-more-btn" href="<?php echo get_permalink($ref->ID); ?>"><?php _e( 'meer info', 'trium' ); ?></a>
                     </div>
                   </div>   
                 </div>    
               </div>
             </div>
-            <div class="referenties-detials-related-grd-item">
-              <div class="blog-grid-item">                
-                <div class="blog-grid-img">                    
-                  <a href="#" class="overlay-link"></a>
-                  <div class="bgi-img inline-bg" style="background-image: url('assets/images/grid-img-1.jpg');">                  
-                  </div>
-                </div>  
-                <div class="blog-grid-des mHc">
-                  <div class="blog-grid-des-inner">                                     
-                    <h2 class="fl-h3 bgi-title mHc1"><a href="#">Project titel (h2)</a></h2>                      
-                    <div class="bgi-des mHc2">
-                      <p>Eu at lacus, lorem facilisi at. Ultricies maecenas mollis morbi porttitor aliquam condimentum euismod sagittis.</p>
-                    </div>    
-                    <div class="fl-pro-grd-btn fl-btn-absolute">
-                      <a class="fl-read-more-btn" href="#">meer info</a>
-                    </div>
-                  </div>   
-                </div>    
-              </div>
-            </div>
-            <div class="referenties-detials-related-grd-item">
-              <div class="blog-grid-item">                
-                <div class="blog-grid-img">                    
-                  <a href="#" class="overlay-link"></a>
-                  <div class="bgi-img inline-bg" style="background-image: url('assets/images/grid-img-1.jpg');">                  
-                  </div>
-                </div>  
-                <div class="blog-grid-des mHc">
-                  <div class="blog-grid-des-inner">                                     
-                    <h2 class="fl-h3 bgi-title mHc1"><a href="#">Project titel (h2)</a></h2>                      
-                    <div class="bgi-des mHc2">
-                      <p>Eu at lacus, lorem facilisi at. Ultricies maecenas mollis morbi porttitor aliquam condimentum euismod sagittis.</p>
-                    </div>    
-                    <div class="fl-pro-grd-btn fl-btn-absolute">
-                      <a class="fl-read-more-btn" href="#">meer info</a>
-                    </div>
-                  </div>   
-                </div>    
-              </div>
-            </div>
+            <?php } ?>
           </div>
+          <?php } ?>
         </div>
       </div>
     </div>
   </div>
 </section>
+<?php } ?>
 <?php get_footer(); ?>

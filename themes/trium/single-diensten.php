@@ -179,7 +179,7 @@ if( empty($disobj) ){
       'posts_per_page'=> 3,
       'orderby' => 'date',
       'order'=> 'desc',
-
+      'post__not_in' => array($thisID),
     ) );
 }
 ?>
