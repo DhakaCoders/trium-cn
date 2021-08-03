@@ -7,8 +7,6 @@ defined( 'THEME_DIR' ) or define( 'THEME_DIR', get_template_directory() );
 defined( 'THEME_URI' ) or define( 'THEME_URI', get_template_directory_uri() );
 
 defined( 'HOMEID' ) or define( 'HOMEID', get_option('page_on_front') );
-defined( 'PERPAGE_REFERENTIES ' ) or define( 'PERPAGE_REFERENTIES', 4 );
-defined( 'PERPAGE_FAQ ' ) or define( 'PERPAGE_FAQ', 10 );
 
 /**
 Theme Setup->>
@@ -60,11 +58,11 @@ function cbv_theme_scripts(){
     include_once( THEME_DIR . '/enq-scripts/fonts.php' );
     if( !is_front_page() ) include_once( THEME_DIR . '/enq-scripts/fancybox.php' );
     include_once( THEME_DIR . '/enq-scripts/slick.php' );
-   // include_once( THEME_DIR . '/enq-scripts/swiper.php' );
+    include_once( THEME_DIR . '/enq-scripts/swiper.php' );
     include_once( THEME_DIR . '/enq-scripts/matchheight.php' );
     include_once( THEME_DIR . '/enq-scripts/select2.php' );
     include_once( THEME_DIR . '/enq-scripts/flatpickr.php' );
-    //include_once( THEME_DIR . '/enq-scripts/animate.php' );
+    include_once( THEME_DIR . '/enq-scripts/animate.php' );
     //if( !is_front_page() ) include_once( THEME_DIR . '/enq-scripts/jqueryui.php' );
     include_once( THEME_DIR . '/enq-scripts/theme.default.php' );
 }
@@ -154,23 +152,6 @@ function custom_body_classes($classes){
 
     if( is_front_page() ){
         $classes[]='home';
-    }elseif( is_page_template('page-faq.php') || is_tax('faq_cat') ){
-        $classes[]='sky-btm-bg-cntlr';
-    }elseif( is_page_template('page-overons.php') ){
-        $classes[]='has-banner sky-btm-bg-cntlr';
-    }elseif( is_single() && 'faqs' == get_post_type() ){
-        $classes[]='sky-btm-bg-cntlr';
-    }elseif( is_single() ){
-        $classes[]='sky-btm-bg-cntlr';
-    }
-    elseif( is_page_template('page-referenties.php') || is_tax('referenties_cat') ){
-        $classes[]='sky-top-bg-cntlr';
-    }elseif( is_single() && 'referenties' == get_post_type() ){
-        $classes[]='sky-btm-bg-cntlr';
-    }elseif( is_single() && 'coaching' == get_post_type() ){
-        $classes[]='sky-btm-bg-cntlr sky-top-bg-cntlr';
-    }elseif( is_page_template('page-werkwijze.php')  ){
-        $classes[]='werk-bdff has-banner sky-btm-bg-cntlr';
     }
     return $classes;
 }
@@ -179,17 +160,6 @@ add_filter('body_class', 'custom_body_classes');
 
 add_filter( 'wpcf7_autop_or_not', '__return_false' );
 
-if( !function_exists('cbv_custom_both_breadcrump')){
-  function cbv_both_breadcrump(){
-    if ( is_product_category() || is_product() || is_shop() || is_cart() || is_checkout()
-       || is_woocommerce() || is_product_tag() || is_account_page() || is_wc_endpoint_url()
-       || is_ajax()) {
-                woocommerce_breadcrumb();
-            }else{
-                cbv_breadcrumbs();
-            }
-    }
-}
 
 function custom_post_type_query($query) {
     if (!is_admin() && $query->is_main_query()){
