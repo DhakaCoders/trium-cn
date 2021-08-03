@@ -105,7 +105,7 @@ add_action( 'admin_footer', 'wpmu_role_based_style', 99 );
 function cbv_table( $table, $title =''){
   if ( ! empty ( $table ) ) {
     echo '<div class="dfp-tbl-wrap">';
-    if( !empty($title) ) printf('<h5>%s</h5>', $title);
+    if( !empty($title) ) printf('<h6 class="fl-h6">%s</h6>', $title);
     echo '<div class="table-dsc" data-aos="fade-up" data-aos-delay="200">
     <table>';
     if ( ! empty( $table['caption'] ) ) {
