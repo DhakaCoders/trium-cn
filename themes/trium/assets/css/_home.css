@@ -1,3 +1,26 @@
+.home-messege{
+    padding: 18px 0;
+    background: #1A7ABE;
+}
+
+.home-messege-inr{
+    text-align: center;
+    color: #2C113E;
+}
+.home-messege-inr p{
+    margin-bottom: 0;
+    color:#fff;
+}
+.home-messege-inr p strong{
+    display: inline-block;
+    vertical-align: baseline;
+    margin-right: 10px;
+    font-family: 'Work Sans', sans-serif;
+    font-weight:700;
+}
+
+
+
 .hm-banner{
 	position: relative;
 }
