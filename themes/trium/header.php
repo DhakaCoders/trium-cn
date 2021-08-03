@@ -60,7 +60,29 @@
 
   </svg>
 
-  
+<?php 
+  $topbartekst = get_field('topbartekst', 'options');
+  $logoObj = get_field('hdlogo', 'options');
+  if( is_array($logoObj) ){
+    $logo_tag = '<img src="'.$logoObj['url'].'" alt="'.$logoObj['alt'].'" title="'.$logoObj['title'].'">';
+  }else{
+    $logo_tag = '';
+  }
+  $smedias = get_field('social_media', 'options');
+?>  
+<?php if( is_front_page() && $topbartekst ): ?>
+<section class="home-messege">
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="home-messege-inr">
+        <?php if( !empty($topbartekst) ) echo wpautop( $topbartekst  ); ?>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+<?php endif; ?>
   <div class="bdoverlay"></div>
   <div class="page-body-cntlr">
     <header class="header-wrap">
