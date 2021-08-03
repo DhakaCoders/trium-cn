@@ -799,7 +799,7 @@ boek-je-form-sec-wrp
     .contact-form-info ul li a{
         font-size: 17px;
     }
-    .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field input,
+/*    .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field input,*/
     .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field label,
     .error-msg span{
         font-size: 17px;
@@ -930,6 +930,12 @@ boek-je-form-sec-wrp
     .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-textarea textarea{
         height:200px;
     }
+    .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field.wpforms-field-radio ul.wpforms-field-required li label:after{
+        top:5px;
+    }
+    .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field.wpforms-field-radio ul.wpforms-field-required li label:before{
+        top:1px;
+    }
 }
 @media(max-width:830px){
     .contact-form-lft{
@@ -1009,8 +1015,21 @@ boek-je-form-sec-wrp
         font-size:16px;
     }
     .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field input,
-    .error-msg span{
+    .error-msg span,
+    .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field ul.wpforms-field-required li label{
         font-size:14px;
+    }
+    .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field.wpforms-field-radio ul.wpforms-field-required li label:before{
+        top: -1px;
+    }
+    .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field.wpforms-field-radio ul.wpforms-field-required li label:after{
+        top: 3px;
+    }
+    .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field.wpforms-field-checkbox ul.wpforms-field-required li label:before{
+        top:-1px;
+    }
+    .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field.wpforms-field-checkbox ul.wpforms-field-required li label:after{
+        top:-1px;
     }
     .contact-form-sec-wrp, 
     .fl-form-sec-wrp{
