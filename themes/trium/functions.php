@@ -152,7 +152,13 @@ function custom_body_classes($classes){
     }
 
     if( is_front_page() ){
-        $classes[]='home';
+        $classes[]='home border-cntlr';
+    }
+    if( is_page_template('page-contact.php') ){
+        $classes[]='border-cntlr';
+    }
+    if( is_single() && 'diensten' == get_post_type() ){
+        $classes[]='border-cntlr';
     }
     return $classes;
 }
