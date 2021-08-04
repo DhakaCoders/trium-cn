@@ -129,6 +129,10 @@
 	max-width: 350px;
 }
 
+.over-ons-lookout-des h3{
+	text-transform: capitalize;
+}
+
 
 .ood-location,
 .ood-tel,
@@ -364,6 +368,12 @@
 	}
 	.over-ons-grds-row:nth-child(2n+2) .over-ons-grds-rgt {
 	    padding-right: 0px;
+	}
+	.client-logo-cntlr{
+		height: 60px;
+	}
+	.client-logo-cntlr img {
+	    max-height: 60px;
 	}
 }
 
