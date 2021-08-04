@@ -1,7 +1,6 @@
 .fl-h1-144{
 	font-size: 144px;
 	margin-bottom: 15px;
-	/*margin-bottom: 30px;*/
 	margin-top: -15px;
 }
 .block-page-sub-heading{
@@ -17,19 +16,15 @@
 }
 
 .page-404-lft-des {
-    /*width: 42.49%;*/
     width: 41%;
     padding-top: 132px;
 }
 
 .page-404-rgt-img {
 	width: 59%;
-    /*width: 57.51%;*/
     padding-left: 127px;
 }
 .page-404-img{
-	/*padding-left: 107px;
-    padding-right: 123px;*/
     padding-top: 11px;
     padding-bottom: 9px;
 }
@@ -219,7 +214,6 @@
 	.page-404-des-inner h1 {
     	text-align: center;
     	margin-bottom: 10px;
-    	/*margin-bottom: 34px;*/
 	    margin-top: 0;
 	}
 
