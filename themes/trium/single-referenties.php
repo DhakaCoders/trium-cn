@@ -28,36 +28,38 @@ $posttitle = get_the_title();
         </div>
       </div>
     </div>
-    <?php if( have_rows('inhoud_ref') ){ ?>
-      <?php 
-        $fctitle = '';
-         $i = 1; 
-          while ( have_rows('inhoud_ref') ) : the_row(); 
-            if( $i == 1 && get_row_layout() == 'koptekst' ){ 
-              $fctitle = get_sub_field('fc_titel');
-            } 
-            $i++; 
-          endwhile;
-      ?>
-      <?php if( empty($fctitle) ): ?>
-      <div class="block">
-        <div class="dfp-promo-module">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12">
-                <div class="block-850">
-                  <div class="dfp-promo-module-des">
-                    <?php 
-                      if( !empty($posttitle) ) printf('<strong class="dfp-promo-module-title fl-h1">%s</strong>', $posttitle );  
-                    ?>
-                  </div>
+    <?php 
+      $fctitle = '';
+      if( have_rows('inhoud_ref') ){
+       $i = 1; 
+        while ( have_rows('inhoud_ref') ) : the_row(); 
+          if( $i == 1 && get_row_layout() == 'koptekst' ){ 
+            $fctitle = get_sub_field('fc_titel');
+          } 
+          $i++; 
+        endwhile;
+      }
+    ?>
+    <?php if( empty($fctitle) ): ?>
+    <div class="block">
+      <div class="dfp-promo-module">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="block-850">
+                <div class="dfp-promo-module-des">
+                  <?php 
+                    if( !empty($posttitle) ) printf('<strong class="dfp-promo-module-title fl-h1">%s</strong>', $posttitle );  
+                  ?>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    <?php endif; ?>
+    </div>
+  <?php endif; ?>
+    <?php if( have_rows('inhoud_ref') ){ ?>
     <?php while ( have_rows('inhoud_ref') ) : the_row();  ?>
       <?php if( get_row_layout() == 'koptekst' ){ 
         $fc_titel = get_sub_field('fc_titel');

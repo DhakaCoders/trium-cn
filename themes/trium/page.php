@@ -1,9 +1,39 @@
 <?php 
 	get_header();
+	$posttitle = get_the_title();
 ?>
 <?php get_template_part('templates/breadcrumbs'); ?>
 <section class="innerpage-con-wrap">
   <article class="default-page-con"> 
+    <?php 
+      $fc_title = '';
+      if( have_rows('inhoud') ){
+       $i = 1; 
+        while ( have_rows('inhoud') ) : the_row(); 
+          if( $i == 1 && get_row_layout() == 'introductietekst' ){ 
+            $fc_title = get_sub_field('titel');
+          } 
+          $i++; 
+        endwhile;
+      }
+    ?>
+    <?php if( empty($fc_title) ): ?>
+    <div class="block">
+      <div class="dfp-promo-module">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="block-850">
+                <div class="dfp-promo-module-des">
+                  <?php if( !empty($posttitle) ) printf('<strong class="dfp-promo-module-title fl-h1">%s</strong>', $posttitle); ?>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <?php endif; ?>
 	<?php while ( have_rows('inhoud') ) : the_row();  ?>
 		<?php 
 			if( get_row_layout() == 'introductietekst' ){ 
@@ -187,7 +217,7 @@
 		            <div class="blog-grid-item">                
 		              <div class="blog-grid-img">                    
 		                <a href="<?php echo get_permalink($ref->ID); ?>" class="overlay-link"></a>
-		                <div class="bgi-img inline-bg" style="background-image: url('<?php echo $imgknop; ?>');">                  
+		                <div class="bgi-img inline-bg" style="background-image: url('<?php echo $imgsrc; ?>');">                  
 		                </div>
 		              </div>  
 		              <div class="blog-grid-des mHc">
@@ -275,17 +305,29 @@
         $hidexs = get_sub_field('hide_mobile');
         $hideclass = $hidexs?' class="hide-sm"':'';
         ?>
-        <div class="block">
-	        <div class="block-850">
-	          <div style="height:<?php echo $fc_gap; ?>px"<?php echo $hideclass; ?>></div>
-	        </div>
-	        </div>
+				<div class="block">
+				<div class="container">
+				  <div class="row">
+				  <div class="col-md-12">
+				    <div class="block-850">
+				      <div style="height:<?php echo $fc_gap; ?>px"<?php echo $hideclass; ?>></div>
+				    </div>
+				  </div>
+				</div>
+				</div>
+				</div>
         <?php }elseif( get_row_layout() == 'horizontal_line' ){ ?>
-        <div class="block">
-	        <div class="block-850">
-	          <hr>
-	        </div>
-        </div>
+				<div class="block">
+					<div class="container">
+						<div class="row">
+						  <div class="col-md-12">
+								<div class="block-850">
+									<hr>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
     	<?php } ?>
     <?php endwhile; ?>
   </article>
