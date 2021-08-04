@@ -157,6 +157,8 @@ function custom_body_classes($classes){
         $classes[]='border-cntlr';
     }elseif( is_single() && 'diensten' == get_post_type() ){
         $classes[]='border-cntlr';
+    }elseif( is_single() && 'referenties' == get_post_type() ){
+        $classes[]='border-cntlr';
     }
     return $classes;
 }
