@@ -8,7 +8,7 @@
     border-top:none;
 }
 .contact-form-block{
-    padding-bottom: 108px;
+    padding-bottom: 84px;
 }
 .contact-form-lft{
 	width: 74.5%;
@@ -354,6 +354,7 @@ body.woocommerce-edit-account .success-msg {
 
 .contact-form-wrp .wpforms-container label.wpforms-field-label span.wpforms-required-label{
 	display: inline-block!important;
+    color: #162b39;
 }
 .wpforms-field.wpforms-field-html p{
 	color: #78797B;
@@ -525,11 +526,14 @@ body.woocommerce-edit-account .success-msg {
     padding: 0 !important;
 }
 
-.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-has-error label.wpforms-field-label{
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-has-error label.wpforms-field-label,
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-has-error label.wpforms-field-label span.wpforms-required-label{
     color:#D61D1D!important;
 }
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-radio.wpforms-has-error label.wpforms-field-label,
-.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-checkbox.wpforms-has-error label.wpforms-field-label{
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-checkbox.wpforms-has-error label.wpforms-field-label,
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-checkbox.wpforms-has-error label.wpforms-field-label span.wpforms-required-label,
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-radio.wpforms-has-error label.wpforms-field-label span.wpforms-required-label{
     color: #162B39!important;
 }
 form .bootstrap-select .wpforms-error + button{
@@ -966,7 +970,7 @@ boek-je-form-sec-wrp
 	.contact-form-sec-wrp .contact-form-lft{
 		position: relative;
 	    z-index: 2;
-        margin-bottom: 52px;
+        margin-bottom: 28px;
 	}
 	.contact-form-info-socail {
 	    padding-top: 20px;
