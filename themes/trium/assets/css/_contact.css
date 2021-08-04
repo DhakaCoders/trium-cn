@@ -528,7 +528,10 @@ body.woocommerce-edit-account .success-msg {
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-has-error label.wpforms-field-label{
     color:#D61D1D!important;
 }
-
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-radio.wpforms-has-error label.wpforms-field-label,
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field-checkbox.wpforms-has-error label.wpforms-field-label{
+    color: #162B39!important;
+}
 form .bootstrap-select .wpforms-error + button{
     border-color:#D61D1D!important;
     color:#D61D1D!important;
@@ -806,18 +809,12 @@ boek-je-form-sec-wrp
     }
     .wpforms-container .wpforms-datepicker-wrap .wpforms-datepicker-clear{
         background-position: 50% 46%!important;    
-    }
-    .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field.NameField{
-        padding-top:28px;
     }    
 }
 
 @media (max-width: 1499px) {
     .wpforms-container .wpforms-datepicker-wrap .wpforms-datepicker-clear{
         background-position: 50% 46%!important;    
-    }
-    .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field.NameField{
-        padding-top:28px;
     }
     .contact-form-info-cntlr {
         padding: 55px 45px 55px 45px;
@@ -861,9 +858,6 @@ boek-je-form-sec-wrp
 	    width: 60px;
 	    height: 75px;
 	}
-	.contact-google-map-sec-wrp {
-	    padding-bottom: 65px;
-	}
 	.contact-form-lft {
 	    width: 68%;
 	    padding-right: 40px;
@@ -894,9 +888,6 @@ boek-je-form-sec-wrp
 
 @media(max-width: 991px){
 	
-	.contact-google-map-sec-wrp{
-	    padding-bottom: 45px;
-	}
 	.contact-form-lft{
         width: 64%;
         padding-right: 30px;
