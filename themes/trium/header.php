@@ -62,6 +62,8 @@
 
 <?php 
   $topbartekst = get_field('topbartekst', 'options');
+  $usps = get_field('usps', 'options');
+  $telefoon = get_field('telefoon', 'options');
   $logoObj = get_field('hdlogo', 'options');
   if( is_array($logoObj) ){
     $logo_tag = '<img src="'.$logoObj['url'].'" alt="'.$logoObj['alt'].'" title="'.$logoObj['title'].'">';
@@ -83,80 +85,84 @@
 </div>
 </section>
 <?php endif; ?>
-  <div class="bdoverlay"></div>
-  <div class="page-body-cntlr">
-    <header class="header-wrap">
-      <div class="header">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="header-inr clearfix">
-                <div class="hdr-lft">
-                  <div class="logo">
-                    <a href="#"><img src="<?php echo THEME_URI; ?>/assets/images/logo.svg"></a>
+<div class="bdoverlay"></div>
+<div class="page-body-cntlr">
+  <header class="header-wrap">
+    <div class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="header-inr clearfix">
+              <div class="hdr-lft">
+              <?php if( !empty($logo_tag) ): ?>
+              <div class="logo">
+                <a href="<?php echo esc_url(home_url('/')); ?>">
+                  <?php echo $logo_tag; ?>
+                </a>
+              </div>
+              <?php endif; ?>
+              </div>
+              <div class="hdr-rgt">
+                <div class="hdr-topbar">
+                  <div class="hdr-top-menu hide-md">
+                    <?php 
+                      $menuOptions = array( 
+                          'theme_location' => 'cbv_top_menu', 
+                          'menu_class' => 'clearfix reset-list',
+                          'container' => '',
+                          'container_class' => ''
+                        );
+                      wp_nav_menu( $menuOptions ); 
+                    ?>
                   </div>
+                  <div class="hdr-lang hide-md">
+                    <ul class="reset-list">
+                      <li class="active"><a href="#">nl</a></li>
+                      <li><a href="#">fr</a></li>
+                    </ul>
+                  </div>
+                  <div class="hdr-socials hide-md">
+                    <ul class="reset-list">
+                      <?php if( !empty($smedias['facebook_url']) ): ?>
+                      <li>
+                        <a target="_blank" href="<?php echo $smedias['facebook_url']; ?>">
+                          <i><svg class="facebook-icon" width="24" height="24" viewBox="0 0 24 24" fill="#899EAC">
+                            <use xlink:href="#facebook-icon"></use> </svg>
+                          </i>
+                        </a>
+                      </li>
+                      <?php endif; ?>
+                      <?php if( !empty($smedias['linkedin_url']) ): ?>
+                      <li>
+                        <a target="_blank" href="<?php echo $smedias['instagram_url']; ?>">
+                          <i><svg class="linkdin-icon" width="24" height="24" viewBox="0 0 24 24" fill="#899EAC">
+                            <use xlink:href="#linkdin-icon"></use> </svg>
+                          </i>
+                        </a>
+                      </li>
+                      <?php endif; ?>
+                    </ul>
+                  </div>
+                  <?php if( !empty($telefoon) ) printf('<div class="hdr-tel"><a href="tel:%s">%s: %s</a></div>', phone_preg($telefoon), __('Tel', 'trium'),  $telefoon); ?>
                 </div>
-                <div class="hdr-rgt">
-                  <div class="hdr-topbar">
-                    <div class="hdr-top-menu hide-md">
-                      <ul class="clearfix reset-list">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Over ons</a></li>
-                        <li><a href="#">Contact</a></li>
-                      </ul>
-                    </div>
-                    <div class="hdr-lang hide-md">
-                      <ul class="reset-list">
-                        <li class="active"><a href="#">nl</a></li>
-                        <li><a href="#">fr</a></li>
-                      </ul>
-                    </div>
-                    <div class="hdr-socials hide-md">
-                      <ul class="reset-list">
-                        <li>
-                          <a target="_blank" href="#">
-                            <i><svg class="facebook-icon" width="24" height="24" viewBox="0 0 24 24" fill="#899EAC">
-                              <use xlink:href="#facebook-icon"></use> </svg>
-                            </i>
-                          </a>
-                        </li>
-                        <li>
-                          <a target="_blank" href="#">
-                            <i><svg class="linkdin-icon" width="24" height="24" viewBox="0 0 24 24" fill="#899EAC">
-                              <use xlink:href="#linkdin-icon"></use> </svg>
-                            </i>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="hdr-tel">
-                      <a href="tel: +32(0)78/15.80.85">Tel: +32(0)78/15.80.85</a>
-                    </div>
-                  </div>
-                  <div class="hdr-menu">
-                    <nav class="main-nav hide-md">
-                      <ul class="clearfix reset-list">
-                        <li class="current-menu-item"><a href="#">Inbraakbeveiliging</a></li>
-                        <li class="menu-item-has-children">
-                          <a href="#">Brandbeveiliging</a>
-                          <ul class="sub-menu" style="">
-                            <li><a href="#">submenu 1</a></li>
-                            <li><a href="#">submenu 2</a></li>
-                            <li><a href="#">submenu 3</a></li>
-                          </ul>
-                        </li>
-                        <li><a href="#">Toegangscontrole</a></li>
-                        <li><a href="#">Camerabewaking</a></li>
-                        <li><a href="#">Referentie</a></li>
-                      </ul>
-                    </nav>
+                <div class="hdr-menu">
+                  <nav class="main-nav hide-md">
+                    <?php 
+                      $menuOptions = array( 
+                          'theme_location' => 'cbv_main_menu', 
+                          'menu_class' => 'clearfix reset-list',
+                          'container' => '',
+                          'container_class' => ''
+                        );
+                      wp_nav_menu( $menuOptions ); 
+                    ?>
+                  </nav>
 
-                    <div class="hambergar-cntlr show-md">
-                      <div class="hambergar-icon">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                      </div>
+                  <div class="hambergar-cntlr show-md">
+                    <div class="hambergar-icon">
+                      <span></span>
+                      <span></span>
+                      <span></span>
                     </div>
                   </div>
                 </div>
@@ -165,88 +171,78 @@
           </div>
         </div>
       </div>
-      <div class="usp-bar">
-        <div class="usp-bar-cntlr uspBarSlider">
-          <div class="usp-bar-item-cntlr">
-            <span class="usp-bar-item">Gratis risicoanalyse</span>
-          </div>
-          <div class="usp-bar-item-cntlr">
-            <span class="usp-bar-item">Offerte op maat</span>
-          </div>
-          <div class="usp-bar-item-cntlr">
-            <span class="usp-bar-item">Professionele uitvoering</span>
-          </div>
-          <div class="usp-bar-item-cntlr">
-            <span class="usp-bar-item">24u/24u Technische bijstand</span>
-          </div>
-        </div>
-      </div>
-    </header>
-
-    <div class="xs-mobile-menu">
-      <div class="xs-mbl-hdr">
-        <div class="hdr-tel">
-          <a href="tel: +32(0)78/15.80.85">Tel: +32(0)78/15.80.85</a>
-        </div>
-        <div class="hdr-menu">
-          <div class="hambergar-cntlr">
-            <div class="hambergar-icon">
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="xs-menu">
-        <nav class="main-nav">
-          <ul class="clearfix reset-list">
-            <li class="current-menu-item"><a href="#">Home</a></li>
-            <li class="menu-item-has-children">
-              <a href="#">Over ons</a>
-              <ul class="sub-menu" style="">
-                <li><a href="#">submenu 1</a></li>
-                <li><a href="#">submenu 2</a></li>
-                <li><a href="#">submenu 3</a></li>
-              </ul>
-            </li>
-            <li><a href="#">Inbraakbeveiliging</a></li>
-            <li><a href="#">Brandbeveiliging</a></li>
-            <li><a href="#">Toegangscontrole</a></li>
-            <li><a href="#">Camerabewaking</a></li>
-            <li><a href="#">Referentie</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </nav>
-      </div>
-
-      <div class="xs-mbl-btm">
-        <div class="hdr-lang">
-          <ul class="reset-list">
-            <li class="active"><a href="#">nl</a></li>
-            <li><a href="#">fr</a></li>
-          </ul>
-        </div>
-        <div class="hdr-socials">
-          <ul class="reset-list">
-            <li>
-              <a target="_blank" href="#">
-                <i><svg class="facebook-icon" width="24" height="24" viewBox="0 0 24 24" fill="#899EAC">
-                  <use xlink:href="#facebook-icon"></use> </svg>
-                </i>
-              </a>
-            </li>
-            <li>
-              <a target="_blank" href="#">
-                <i><svg class="linkdin-icon" width="24" height="24" viewBox="0 0 24 24" fill="#899EAC">
-                  <use xlink:href="#linkdin-icon"></use> </svg>
-                </i>
-              </a>
-            </li>
-          </ul>
-        </div>
-
-      </div>
-      
     </div>
+    <?php if($usps): ?>
+    <div class="usp-bar">
+      <div class="usp-bar-cntlr uspBarSlider">
+        <?php foreach( $usps as $usp ): ?>
+        <div class="usp-bar-item-cntlr">
+          <?php if( !empty($usp['titel']) ) printf('<span class="usp-bar-item">%s</span>', $usp['titel']); ?>
+        </div>
+        <?php endforeach; ?>
+      </div>
+    </div>
+    <?php endif; ?>
+  </header>
+
+  <div class="xs-mobile-menu">
+    <div class="xs-mbl-hdr">
+      <?php if( !empty($telefoon) ) printf('<div class="hdr-tel"><a href="tel:%s">%s: %s</a></div>', phone_preg($telefoon), __('Tel', 'trium'),  $telefoon); ?>
+      <div class="hdr-menu">
+        <div class="hambergar-cntlr">
+          <div class="hambergar-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="xs-menu">
+      <nav class="main-nav">
+        <?php 
+          $menuOptions = array( 
+              'theme_location' => 'cbv_mobile_main_menu', 
+              'menu_class' => 'clearfix reset-list',
+              'container' => '',
+              'container_class' => ''
+            );
+          wp_nav_menu( $menuOptions ); 
+        ?>
+      </nav>
+    </div>
+
+    <div class="xs-mbl-btm">
+      <div class="hdr-lang">
+        <ul class="reset-list">
+          <li class="active"><a href="#">nl</a></li>
+          <li><a href="#">fr</a></li>
+        </ul>
+      </div>
+      <div class="hdr-socials">
+        <ul class="reset-list">
+          <?php if( !empty($smedias['facebook_url']) ): ?>
+          <li>
+            <a target="_blank" href="<?php echo $smedias['facebook_url']; ?>">
+              <i><svg class="facebook-icon" width="24" height="24" viewBox="0 0 24 24" fill="#899EAC">
+                <use xlink:href="#facebook-icon"></use> </svg>
+              </i>
+            </a>
+          </li>
+          <?php endif; ?>
+          <?php if( !empty($smedias['linkedin_url']) ): ?>
+          <li>
+            <a target="_blank" href="<?php echo $smedias['linkedin_url']; ?>">
+              <i><svg class="linkdin-icon" width="24" height="24" viewBox="0 0 24 24" fill="#899EAC">
+                <use xlink:href="#linkdin-icon"></use> </svg>
+              </i>
+            </a>
+          </li>
+          <?php endif; ?>
+        </ul>
+      </div>
+
+    </div>
+    
+  </div>

@@ -56,7 +56,7 @@ if($disobj){
         foreach( $disobj as $dis ) {
         global $post;
         $imgID = get_post_thumbnail_id($dis->ID);
-        $imgknop = !empty($imgID)? cbv_get_image_src($imgID): referenties_placeholder(); 
+        $imgknop = !empty($imgID)? cbv_get_image_src($imgID): diesten_placeholder(); 
       ?>
       <li>
         <div class="service-sec-grid-item">

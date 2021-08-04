@@ -179,7 +179,7 @@
 				<?php 
 				  foreach( $refobj as $ref ) :
 				  $imgID = get_post_thumbnail_id($ref->ID);
-				  $imgsrc = !empty($imgID)? cbv_get_image_src($imgID): nieuws_placeholder(); 
+				  $imgsrc = !empty($imgID)? cbv_get_image_src($imgID): referenties_placeholder(); 
 				?>
 		          <div class="dfp-grd-item">
 		            <div class="blog-grid-item">                
@@ -232,7 +232,7 @@
 			        foreach( $disobj as $dis ) {
 			        global $post;
 			        $imgID = get_post_thumbnail_id($dis->ID);
-			        $imgknop = !empty($imgID)? cbv_get_image_src($imgID): referenties_placeholder(); 
+			        $imgknop = !empty($imgID)? cbv_get_image_src($imgID): diesten_placeholder(); 
 			      ?>
 		          <li>
 		            <div class="service-sec-grid-item">
