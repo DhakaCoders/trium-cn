@@ -95,6 +95,8 @@
 	        	</div>
 	      	</div>
 	    </div>
+	    </div>
+	    </div>
 	    <?php endif; ?>
 		<?php }elseif( get_row_layout() == 'poster' ){     
 		$fcposter = get_sub_field('afbeeldingen');
