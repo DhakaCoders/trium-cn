@@ -149,15 +149,13 @@ function custom_body_classes($classes){
 
     if( has_banner() ){
         $classes[]='has-banner';
-    }
-
-    if( is_front_page() ){
+    }elseif( is_front_page() ){
         $classes[]='home border-cntlr';
-    }
-    if( is_page_template('page-contact.php') ){
+    }elseif( is_page_template('page-contact.php') ){
         $classes[]='border-cntlr';
-    }
-    if( is_single() && 'diensten' == get_post_type() ){
+    }elseif( is_page_template('page-overons.php') ){
+        $classes[]='border-cntlr';
+    }elseif( is_single() && 'diensten' == get_post_type() ){
         $classes[]='border-cntlr';
     }
     return $classes;
