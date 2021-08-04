@@ -4,9 +4,6 @@
     margin-top: -40px;
 }
 .bedankt-page-content-inner {
-    /*max-width: 720px;
-    width: 100%;
-    margin: auto;*/
     text-align: center;
 }
 .bedankt-massage-icon {
@@ -41,24 +38,6 @@
     font-weight: 600;
     text-transform: uppercase;
 }
-/*.blue-btn {
-    background: #1A7ABE;
-    color: #fff;
-    font-weight: 600;
-    font-size: 16px;
-    font-family: Oswald;
-    text-transform: uppercase;
-    border: 2px solid #1A7ABE;
-    padding: 10px 20px;
-    min-width: 240px;
-    text-align: center;
-    display: inline-block;
-}
-.blue-btn:hover{
-    background: #fff;
-    color: #1A7ABE;
-    border: 2px solid #1A7ABE;
-}*/
 .bedankt-btn a{
     min-width: 240px;
     padding: 14px 15px;
@@ -159,9 +138,6 @@
         font-size: 30px;
         margin-bottom: 20px;
     }
-    /*.bedankt-links ul{
-        display: block;
-    }*/
     .bedankt-links ul li {
         padding: 13px 40px;
     }

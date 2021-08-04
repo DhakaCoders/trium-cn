@@ -145,67 +145,6 @@ if( $('.responsive-slider').length ){
 }
 
 
-var swiper = new Swiper('.catagorySlider', {
-    slidesPerView: 1,
-    loop: true,
-    navigation: {
-      nextEl: '.catagorySlider-arrows .swiper-button-next',
-      prevEl: '.catagorySlider-arrows .swiper-button-prev',
-    },
-    breakpoints: {
-       639: {
-        slidesPerView: 2,
-        spaceBetween: 0,
-      },
-      991: {
-        slidesPerView: 3,
-        spaceBetween: 0,
-      },
-      1199: {
-        loop: false,
-        slidesPerView: 4,
-        spaceBetween: 0,
-      },
-      1920: {
-        loop: false,
-        slidesPerView: 4,
-        spaceBetween: 0,
-      },
-    }
-  });
-
-if( $('#mapID').length ){
-var latitude = $('#mapID').data('latitude');
-var longitude = $('#mapID').data('longitude');
-
-var myCenter= new google.maps.LatLng(latitude,  longitude);
-function initialize(){
-    var mapProp = {
-      center:myCenter,
-      mapTypeControl:true,
-      scrollwheel: false,
-      zoomControl: true,
-      disableDefaultUI: true,
-      zoom:7,
-      streetViewControl: false,
-      rotateControl: true,
-      mapTypeId:google.maps.MapTypeId.ROADMAP,
-      styles: CustomMapStyles
-      };
-
-    var map= new google.maps.Map(document.getElementById('mapID'),mapProp);
-    var marker= new google.maps.Marker({
-      position:myCenter,
-        //icon:'map-marker.png'
-      });
-    marker.setMap(map);
-}
-google.maps.event.addDomListener(window, 'load', initialize);
-
-}
-
-
-
 /* BS form Validator*/
 (function() {
   'use strict';
@@ -227,183 +166,168 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 
 
-
-  /*start of Rannojit*/
-
-
-
-  /*start of Noyon*/
-
-  if( $('.hambergar-cntlr').length ){
-    $('.hambergar-cntlr').click(function(){
-      $('body').toggleClass('allWork');
-    });
-  }
-  if( $('li.menu-item-has-children a').length ){
-    $('li.menu-item-has-children a').click(function(e){
-     event.preventDefault();
-     $(this).next().slideToggle(300);
-     $(this).parent().toggleClass('this-sub-menu-active');
-   });
-  }
+if( $('.hambergar-cntlr').length ){
+  $('.hambergar-cntlr').click(function(){
+    $('body').toggleClass('allWork');
+  });
+}
+if( $('li.menu-item-has-children a').length ){
+  $('li.menu-item-has-children a').click(function(e){
+   event.preventDefault();
+   $(this).next().slideToggle(300);
+   $(this).parent().toggleClass('this-sub-menu-active');
+ });
+}
 
   
-  if (windowWidth <= 767) {
-    if( $('.uspBarSlider').length ){
-      $('.uspBarSlider').slick({
-        dots: false,
-        infinite: false,
-        arrows: false,
-        autoplay: true,
-        autoplaySpeed: 4000,
-        speed: 700,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      });
-    }
+if (windowWidth <= 767) {
+  if( $('.uspBarSlider').length ){
+    $('.uspBarSlider').slick({
+      dots: false,
+      infinite: false,
+      arrows: false,
+      autoplay: true,
+      autoplaySpeed: 4000,
+      speed: 700,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+    });
   }
+}
 
+if( $('.scrollto').length ){
   $('.scrollto').on('click', function(e){
     e.preventDefault();
     var togo = $(this).data('to');
     goToByScroll(togo, 0);
   });
+}
 
-  function goToByScroll(id, offset){
-    if(id){
-      // Remove "link" from the ID
-      id = id.replace("link", "");
-      // Scroll
-      $('html,body').animate(
-        {scrollTop: $(id).offset().top - offset},
-        500);
-    }
+function goToByScroll(id, offset){
+  if(id){
+    // Remove "link" from the ID
+    id = id.replace("link", "");
+    // Scroll
+    $('html,body').animate(
+      {scrollTop: $(id).offset().top - offset},
+      500);
   }
+}
 
-  if (windowWidth <= 767) {
-    if( $('.hmRdrSlider').length ){
-      $('.hmRdrSlider').slick({
-        dots: true,
-        infinite: false,
-        arrows: false,
-        autoplay: true,
-        autoplaySpeed: 4000,
-        speed: 700,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-      });
-    }
-  }
-
-
-  /*start of Sabbir*/
-
-
-
-  /*start of Kashob*/
-  
-
-
-  /*start of Niaz*/
-  $('.diensten-filter li a').click(function(){
-
-        var tab_id = $(this).data('tag');
-
-        $('.diensten-filter li a').removeClass('current');
-        // $('.dnsten-dtls-tab-con').removeClass('current');
-
-        $(this).addClass('current');
-
-        $('.dnsten-dtls-tab-item').removeClass('current').addClass('hide');
-        $('#'+tab_id).addClass('current').removeClass('hide');
-    });
-  
-  // contact form-val
-  if( $('.contact-form-wrp').length ){
-    $('.contact-form-wrp .wpforms-container .wpforms-form .wpforms-submit-container button').on('click', function(){
-      $('.wpforms-field input[required],.wpforms-field select[required]').parents('.wpforms-field').addClass('wpforms-has-error');
-      $('.wpforms-field input[required],.wpforms-field select[required]').addClass('wpforms-error');
-    });
-  }
-
-
-  if( $('.wpforms-error').length ){
-    $('.wpforms-error').on('click', function(){
-      $(this).parents('.wpforms-field').removeClass('wpforms-has-error');
-    });
-  }
-  //==============
-  /*start of Shariful*/
-
-  if (windowWidth <= 767) {
-    if( $('.dfpGrdSlider').length ){
-      $('.dfpGrdSlider').slick({
-        dots: true,
-        infinite: false,
-        autoplay: false,
-        arrows: false,
-        autoplaySpeed: 4000,
-        speed: 700,
-        slidesToShow: 1,
-        slidesToScroll: 1
-      });
-    }
-  }
-
-  if( $('.cleientSlider').length ){
-    $('.cleientSlider').slick({
-      dots: false,
-      infinite: true,
+if (windowWidth <= 767) {
+  if( $('.hmRdrSlider').length ){
+    $('.hmRdrSlider').slick({
+      dots: true,
+      infinite: false,
+      arrows: false,
       autoplay: true,
+      autoplaySpeed: 4000,
+      speed: 700,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+    });
+  }
+}
+
+
+
+$('.diensten-filter li a').click(function(){
+
+  var tab_id = $(this).data('tag');
+
+  $('.diensten-filter li a').removeClass('current');
+  // $('.dnsten-dtls-tab-con').removeClass('current');
+
+  $(this).addClass('current');
+
+  $('.dnsten-dtls-tab-item').removeClass('current').addClass('hide');
+  $('#'+tab_id).addClass('current').removeClass('hide');
+});
+  
+
+// contact form-val
+if( $('.contact-form-wrp').length ){
+  $('.contact-form-wrp .wpforms-container .wpforms-form .wpforms-submit-container button').on('click', function(){
+    $('.wpforms-field input[required],.wpforms-field select[required]').parents('.wpforms-field').addClass('wpforms-has-error');
+    $('.wpforms-field input[required],.wpforms-field select[required]').addClass('wpforms-error');
+  });
+}
+
+
+if( $('.wpforms-error').length ){
+  $('.wpforms-error').on('click', function(){
+    $(this).parents('.wpforms-field').removeClass('wpforms-has-error');
+  });
+}
+
+
+if (windowWidth <= 767) {
+  if( $('.dfpGrdSlider').length ){
+    $('.dfpGrdSlider').slick({
+      dots: true,
+      infinite: false,
+      autoplay: false,
       arrows: false,
       autoplaySpeed: 4000,
       speed: 700,
-      slidesToShow: 6,
-      slidesToScroll: 1,
-      responsive: [
-        {
-          breakpoint: 1600,
-          settings: {
-            slidesToShow: 5,
-            slidesToScroll: 1
-          }
-        },
-        {
-          breakpoint: 1200,
-          settings: {
-            slidesToShow: 4,
-            slidesToScroll: 1
-          }
-        },
-        {
-          breakpoint: 992,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 1
-          }
-        }
-        // You can unslick at a given breakpoint now by adding:
-        // settings: "unslick"
-        // instead of a settings object
-      ]
+      slidesToShow: 1,
+      slidesToScroll: 1
     });
   }
-  if (windowWidth <= 767) {
-    if( $('.rdrSlider').length ){
-      $('.rdrSlider').slick({
-        dots: true,
-        infinite: false,
-        autoplay: false,
-        arrows: false,
-        autoplaySpeed: 4000,
-        speed: 700,
-        slidesToShow: 1,
-        slidesToScroll: 1
-      });
-    }
+}
+
+if( $('.cleientSlider').length ){
+  $('.cleientSlider').slick({
+    dots: false,
+    infinite: true,
+    autoplay: true,
+    arrows: false,
+    autoplaySpeed: 4000,
+    speed: 700,
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1600,
+        settings: {
+          slidesToShow: 5,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 992,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 1
+        }
+      }
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ]
+  });
+}
+
+if (windowWidth <= 767) {
+  if( $('.rdrSlider').length ){
+    $('.rdrSlider').slick({
+      dots: true,
+      infinite: false,
+      autoplay: false,
+      arrows: false,
+      autoplaySpeed: 4000,
+      speed: 700,
+      slidesToShow: 1,
+      slidesToScroll: 1
+    });
   }
-
-
-    new WOW().init();
+}
 
 })(jQuery);
