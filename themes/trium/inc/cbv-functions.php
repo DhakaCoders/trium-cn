@@ -75,7 +75,7 @@ add_filter('upload_mimes', 'cc_mime_types');
 
 function phone_preg( $show_telefoon ){
   $replaceArray = '';
-  $spacialArry = array(".", "/", "+", " ");
+  $spacialArry = array(".", "/", "+", " ", ")", "(");
   $show_telefoon = trim(str_replace($spacialArry, $replaceArray, $show_telefoon));
   return $show_telefoon;
 }
@@ -197,39 +197,13 @@ function get_title_by_page_template( $pagetemplate ){
   return $post_title;
 }
 
-function shop_placeholder($format = 'src'){
+function diesten_placeholder($format = 'src'){
   $placehoder = get_field('placeholder', 'options');
   if( !empty($placehoder) ){
       if( $format == 'src' ){
-        $placeholder = !empty($placehoder['shop'])? cbv_get_image_src($placehoder['shop']):'';
+        $placeholder = !empty($placehoder['diensten'])? cbv_get_image_src($placehoder['diensten']):'';
       }else{
-        $placeholder = !empty($placehoder['shop'])? cbv_get_image_tag($placehoder['shop']):'';
-      }
-      return $placeholder;
-  }
-  return '';
-
-}
-function nieuws_placeholder($format = 'src'){
-  $placehoder = get_field('placeholder', 'options');
-  if( !empty($placehoder) ){
-      if( $format == 'src' ){
-        $placeholder = !empty($placehoder['nieuws'])? cbv_get_image_src($placehoder['nieuws']):'';
-      }else{
-        $placeholder = !empty($placehoder['nieuws'])? cbv_get_image_tag($placehoder['nieuws']):'';
-      }
-      return $placeholder;
-  }
-  return '';
-
-}
-function coaching_placeholder($format = 'src'){
-  $placehoder = get_field('placeholder', 'options');
-  if( !empty($placehoder) ){
-      if( $format == 'src' ){
-        $placeholder = !empty($placehoder['coaching'])? cbv_get_image_src($placehoder['coaching']):'';
-      }else{
-        $placeholder = !empty($placehoder['coaching'])? cbv_get_image_tag($placehoder['coaching']):'';
+        $placeholder = !empty($placehoder['diensten'])? cbv_get_image_tag($placehoder['diensten']):'';
       }
       return $placeholder;
   }

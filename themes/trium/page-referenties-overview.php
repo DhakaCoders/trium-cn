@@ -7,29 +7,7 @@ $thisID = get_the_ID();
 $custom_titel = get_field('custom_titel', $thisID);
 $page_title = !empty($custom_titel) ? $custom_titel : get_the_title();
 ?>
-<section class="breadcrumb-sec hide-sm">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="breadcrumb-cntlr">
-          <ul class="reset-list clearfix">
-            <li class="home">
-              <a href="#">
-                <span class="item">Home</span>
-              </a>
-            </li>
-            <li>
-              <a href="#"><span>Binnenpagina</span></a>
-            </li>
-            <li class="active">
-              <span>Binnenpagina</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<?php get_template_part('templates/breadcrumbs'); ?>
 <section class="page-entry-hdr-cntlr">
   <div class="container">
     <div class="row">
@@ -66,7 +44,7 @@ if( $query->have_posts() ):
                 while($query->have_posts()): $query->the_post(); 
                 global $post;
                 $imgID = get_post_thumbnail_id(get_the_ID());
-                $imgsrc = !empty($imgID)? cbv_get_image_src($imgID): '';
+                $imgsrc = !empty($imgID)? cbv_get_image_src($imgID): referenties_placeholder();
               ?>  
               <?php 
               if($i == 4): 

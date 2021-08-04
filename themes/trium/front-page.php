@@ -64,49 +64,60 @@ if($intro){
 </section>
 <?php } ?>
 <?php } ?>
+<?php 
+$showhide_diensten = get_field('showhide_diensten', HOMEID);
+if($showhide_diensten){
+$dienst = get_field('dienstensec', HOMEID);
+if($dienst){
+$dieobj = $dienst['select_diensten'];
+if( empty($dieobj) ){
+  $dieobj = get_posts( array(
+      'post_type' => 'diensten',
+      'posts_per_page'=> 4,
+      'orderby' => 'date',
+      'order'=> 'desc'
+    ) );
+}
+if($dieobj){
+?>
 <section class="service-sec">
   <div class="service-sec-cntlr">
     <ul class="reset-list ulc">
+      <?php 
+        foreach( $dieobj as $dis ) {
+        global $post;
+        $imgID = get_post_thumbnail_id($dis->ID);
+        $imgknop = !empty($imgID)? cbv_get_image_src($imgID): diesten_placeholder(); 
+      ?>
       <li>
         <div class="service-sec-grid-item">
-          <a href="#" class="overlay-link"></a>
-          <div class="service-sec-grid-item-img inline-bg" style="background:url(<?php echo THEME_URI; ?>/assets/images/category-brnd.jpg);">
-            <h2 class="service-sec-grid-item-title fl-h2"><a href="#">Cameratoezicht<br> (h2)</a></h2>
+          <a href="<?php echo get_permalink($dis->ID); ?>" class="overlay-link"></a>
+          <div class="service-sec-grid-item-img inline-bg" style="background:url(<?php echo $imgknop; ?>);">
+            <h2 class="service-sec-grid-item-title fl-h2"><a href="<?php echo get_permalink($dis->ID); ?>"><?php echo $dis->post_title; ?></a></h2>
           </div>
         </div>
       </li>
-      <li>
-        <div class="service-sec-grid-item">
-          <a href="#" class="overlay-link"></a>
-          <div class="service-sec-grid-item-img inline-bg" style="background:url(<?php echo THEME_URI; ?>/assets/images/category-brnd.jpg);">
-            <h2 class="service-sec-grid-item-title fl-h2"><a href="#">Cameratoezicht<br> (h2)</a></h2>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="service-sec-grid-item">
-          <a href="#" class="overlay-link"></a>
-          <div class="service-sec-grid-item-img inline-bg" style="background:url(<?php echo THEME_URI; ?>/assets/images/category-brnd.jpg);">
-            <h2 class="service-sec-grid-item-title fl-h2"><a href="#">Cameratoezicht<br> (h2)</a></h2>
-          </div>
-        </div>
-      </li>
-      <li>
-        <div class="service-sec-grid-item">
-          <a href="#" class="overlay-link"></a>
-          <div class="service-sec-grid-item-img inline-bg" style="background:url(<?php echo THEME_URI; ?>/assets/images/category-brnd.jpg);">
-            <h2 class="service-sec-grid-item-title fl-h2"><a href="#">Cameratoezicht<br> (h2)</a></h2>
-          </div>
-        </div>
-      </li>
+      <?php } ?>
     </ul>
   </div>
 </section>
+<?php } ?>
+<?php } ?>
+<?php } ?>
 <?php 
 $showhide_referenties = get_field('showhide_referenties', HOMEID);
 if($showhide_referenties){
 $hrefer = get_field('hreferenties', HOMEID);
 if($hrefer){
+$refobj = $hrefer['select_referenties'];
+if( empty($refobj) ){
+  $refobj = get_posts( array(
+      'post_type' => 'referenties',
+      'posts_per_page'=> 3,
+      'orderby' => 'date',
+      'order'=> 'desc'
+    ) );
+}
 ?>
 <section class="referenties-detials-related-sec diensten-detials-related-sec">
   <div class="container">
@@ -116,68 +127,37 @@ if($hrefer){
           <div class="fl-sec-entry-hdr">
             <?php if( !empty($hrefer['titel']) ) printf( '<h2 class="fl-h2">%s</h2>', $hrefer['titel']); ?>
           </div>
+          <?php if($refobj){ ?>
           <div class="referenties-detials-related-grds clearfix hmRdrSlider">
+            <?php 
+              foreach( $refobj as $ref ) {
+              global $post;
+              $imgID = get_post_thumbnail_id($ref->ID);
+              $imgknop = !empty($imgID)? cbv_get_image_src($imgID): referenties_placeholder(); 
+            ?>
             <div class="referenties-detials-related-grd-item">
               <div class="blog-grid-item">                
                 <div class="blog-grid-img">                    
-                  <a href="#" class="overlay-link"></a>
-                  <div class="bgi-img inline-bg" style="background-image: url('<?php echo THEME_URI; ?>/assets/images/grid-img-1.jpg');">                  
+                  <a href="<?php echo get_permalink($ref->ID); ?>" class="overlay-link"></a>
+                  <div class="bgi-img inline-bg" style="background-image: url('<?php echo $imgknop; ?>');">                  
                   </div>
                 </div>  
                 <div class="blog-grid-des mHc" style="height: 153px;">
                   <div class="blog-grid-des-inner">                                     
-                    <h2 class="fl-h3 bgi-title mHc1" style="height: 36px;"><a href="#">Project titel (h2)</a></h2>                      
+                    <h2 class="fl-h3 bgi-title mHc1" style="height: 36px;"><a href="<?php echo get_permalink($ref->ID); ?>"><?php echo $ref->post_title; ?></a></h2>                      
                     <div class="bgi-des mHc2" style="height: 50px;">
-                      <p>Eu at lacus, lorem facilisi at. Ultricies maecenas mollis morbi porttitor aliquam condimentum euismod sagittis.</p>
+                      <?php echo wpautop($ref->post_excerpt); ?>
                     </div>    
                     <div class="fl-pro-grd-btn fl-btn-absolute">
-                      <a class="fl-read-more-btn" href="#">meer info</a>
+                      <a class="fl-read-more-btn" href="<?php echo get_permalink($ref->ID); ?>"><?php _e( 'meer info', 'trium' ); ?></a>
                     </div>
                   </div>   
                 </div>    
               </div>
             </div>
-            <div class="referenties-detials-related-grd-item">
-              <div class="blog-grid-item">                
-                <div class="blog-grid-img">                    
-                  <a href="#" class="overlay-link"></a>
-                  <div class="bgi-img inline-bg" style="background-image: url('<?php echo THEME_URI; ?>/assets/images/grid-img-1.jpg');">                  
-                  </div>
-                </div>  
-                <div class="blog-grid-des mHc" style="height: 153px;">
-                  <div class="blog-grid-des-inner">                                     
-                    <h2 class="fl-h3 bgi-title mHc1" style="height: 36px;"><a href="#">Project titel (h2)</a></h2>                      
-                    <div class="bgi-des mHc2" style="height: 50px;">
-                      <p>Eu at lacus, lorem facilisi at. Ultricies maecenas mollis morbi porttitor aliquam condimentum euismod sagittis.</p>
-                    </div>    
-                    <div class="fl-pro-grd-btn fl-btn-absolute">
-                      <a class="fl-read-more-btn" href="#">meer info</a>
-                    </div>
-                  </div>   
-                </div>    
-              </div>
-            </div>
-            <div class="referenties-detials-related-grd-item">
-              <div class="blog-grid-item">                
-                <div class="blog-grid-img">                    
-                  <a href="#" class="overlay-link"></a>
-                  <div class="bgi-img inline-bg" style="background-image: url('<?php echo THEME_URI; ?>/assets/images/grid-img-1.jpg');">                  
-                  </div>
-                </div>  
-                <div class="blog-grid-des mHc" style="height: 153px;">
-                  <div class="blog-grid-des-inner">                                     
-                    <h2 class="fl-h3 bgi-title mHc1" style="height: 36px;"><a href="#">Project titel (h2)</a></h2>                      
-                    <div class="bgi-des mHc2" style="height: 50px;">
-                      <p>Eu at lacus, lorem facilisi at. Ultricies maecenas mollis morbi porttitor aliquam condimentum euismod sagittis.</p>
-                    </div>    
-                    <div class="fl-pro-grd-btn fl-btn-absolute">
-                      <a class="fl-read-more-btn" href="#">meer info</a>
-                    </div>
-                  </div>   
-                </div>    
-              </div>
-            </div>
+            <?php } ?>
           </div>
+          <?php } ?>
         </div>
       </div>
     </div>
