@@ -121,11 +121,11 @@
     
 }
 @media(max-width: 767px){
-    .bedankt-page-content-inner{
+    /*.bedankt-page-content-inner{
         max-width: 375px;
         width: 100%;
         margin: 0 auto;
-    }
+    }*/
     .bedankt-sec {
         padding-top: 63px;
         padding-bottom: 53px;
@@ -135,7 +135,6 @@
         padding-bottom: 31px;
     }
     .bedankt-title .bedankt-heading {
-        font-size: 30px;
         margin-bottom: 20px;
     }
     .bedankt-links ul li {
@@ -144,9 +143,9 @@
     .bedankt-links {
         padding-bottom: 40px;
     }
-    .bedankt-btn a{
+    /*.bedankt-btn a{
         width: 100%;
-    }
+    }*/
     .bedankt-dec p {
         font-size: 16px;
         line-height: 1.6;
@@ -163,10 +162,26 @@
     .bedankt-links ul li {
         padding: 13px 0px;
     }
-    
+    .bedankt-page-content-inner{
+        max-width: 375px;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .bedankt-btn a{
+        width: 100%;
+    }
+    .bedankt-title .bedankt-heading{
+        font-size: 30px;
+    }
 }
 @media(max-width: 479px){
-
+    .bedankt-title .bedankt-heading{
+        font-size: 29px;
+    }
+    .bedankt-massage-icon i svg{
+        width: 80px!important;
+        height: auto!important;
+    }
     
 }
 @media(max-width: 359px){
