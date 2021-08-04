@@ -77,7 +77,7 @@ if($showhideclient){
             <div class="client-grd-item">
               <div class="client-logo-cntlr">
                 <?php 
-                  echo !empty($clientl['knop'])? '<a class="overlay-link" href="'.$clientl['knop'].'"></a>':'';
+                  echo !empty($clientl['knop'])? '<a class="overlay-link" target="_blank" href="'.$clientl['knop'].'"></a>':'';
                   echo !empty($clientl['logo'])? cbv_get_image_tag($clientl['logo']):'';
                 ?>
               </div>
