@@ -15,7 +15,8 @@ $page_title = !empty($intro['titel']) ? $intro['titel'] : '';
         <div class="bedankt-page-content-inner">
           <div class="bedankt-massage-icon">
             <i>
-              <img src="assets/images/bedankt-massage-icon.svg" alt="">
+              <svg class="bedankt-massage-icon-svg" width="100" height="100" viewBox="0 0 100 100" fill="#1A7ABE">
+                          <use xlink:href="#bedankt-massage-icon-svg"></use> </svg>
             </i>
           </div>
           <div class="bedankt-title">
