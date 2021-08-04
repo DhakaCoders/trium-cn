@@ -134,7 +134,7 @@
                       <?php endif; ?>
                       <?php if( !empty($smedias['linkedin_url']) ): ?>
                       <li>
-                        <a target="_blank" href="">
+                        <a target="_blank" href="<?php echo $smedias['instagram_url']; ?>">
                           <i><svg class="linkdin-icon" width="24" height="24" viewBox="0 0 24 24" fill="#899EAC">
                             <use xlink:href="#linkdin-icon"></use> </svg>
                           </i>

@@ -170,13 +170,7 @@ add_filter( 'wpcf7_autop_or_not', '__return_false' );
 
 function custom_post_type_query($query) {
     if (!is_admin() && $query->is_main_query()){
-        if(is_tax('referenties_cat')){
-          $query->set('posts_per_page', PERPAGE_REFERENTIES);
 
-        }
-        if(is_tax('faq_cat')){
-          $query->set('posts_per_page', PERPAGE_FAQ);
-        }
     }
     return $query;
 }
