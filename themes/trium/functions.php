@@ -147,17 +147,19 @@ function custom_body_classes($classes){
         return $GLOBALS[$browser];
     }));
 
-    if( has_banner() ){
-        $classes[]='has-banner';
-    }elseif( is_front_page() ){
-        $classes[]='home border-cntlr';
-    }elseif( is_page_template('page-contact.php') ){
+    if( is_front_page() ){
         $classes[]='border-cntlr';
-    }elseif( is_page_template('page-overons.php') ){
+    }
+    if( is_page_template('page-contact.php') ){
         $classes[]='border-cntlr';
-    }elseif( is_single() && 'diensten' == get_post_type() ){
+    }
+    if( is_page_template('page-overons.php') ){
         $classes[]='border-cntlr';
-    }elseif( is_single() && 'referenties' == get_post_type() ){
+    }
+    if( is_single() && 'diensten' == get_post_type() ){
+        $classes[]='border-cntlr';
+    }
+    if( is_single() && 'referenties' == get_post_type() ){
         $classes[]='border-cntlr';
     }
     return $classes;
