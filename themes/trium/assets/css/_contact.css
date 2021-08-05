@@ -133,6 +133,7 @@ body.woocommerce-edit-account .success-msg {
     border: 1px solid #ECECEC;
     box-sizing: border-box;
     padding: 15px 15px 16px;
+    padding-right: 40px;
     color: #777F84;
     font-weight: 400;
     font-size: 16px;
@@ -141,6 +142,14 @@ body.woocommerce-edit-account .success-msg {
     transition: all 0.5s;
     -ms-transition: all 0.5s;
     -webkit-transition: all 0.5s;
+}
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field input::-webkit-outer-spin-button,
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field input[type=number] {
+  -moz-appearance: textfield;
 }
 .wpforms-container .wpforms-datepicker-wrap .wpforms-datepicker-clear{
     right:20px!important;
@@ -479,6 +488,7 @@ body.woocommerce-edit-account .success-msg {
 }
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field.wpforms-has-error input[type="email"].wpforms-error,
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field.wpforms-has-error input[type="text"].wpforms-error,
+.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field.wpforms-has-error input[type="number"].wpforms-error,
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field select.wpforms-valid .select2-selection{
 	border: 1px solid #D61D1D !important;
 }
