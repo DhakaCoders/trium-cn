@@ -206,13 +206,13 @@
     <div class="xs-menu">
       <nav class="main-nav">
         <?php 
-          $menuOptions = array( 
+          $mobilemenuOptions = array( 
               'theme_location' => 'cbv_mobile_main_menu', 
               'menu_class' => 'clearfix reset-list',
               'container' => '',
               'container_class' => ''
             );
-          wp_nav_menu( $menuOptions ); 
+          wp_nav_menu( $mobilemenuOptions ); 
         ?>
       </nav>
     </div>
