@@ -141,7 +141,7 @@ if($lookout){
               if( !empty($lookout['titel']) ) printf('<h2 class="fl-h3">%s</h2>', $lookout['titel']); 
               if( !empty($lookout['beschrijving']) ) echo wpautop($lookout['beschrijving']); 
             ?>
-            <?php if( !empty($lookout['titel']) ) printf('<h3 class="fl-h6">%s</h3>', $lookout['titel']); ?>
+            <?php if( !empty($lookout['ct_titel']) ) printf('<h3 class="fl-h6">%s</h3>', $lookout['ct_titel']); ?>
               <?php 
                 $url = $lookout['url'];
                 $contmaplink = !empty($url)?$url: 'javascript:void()';

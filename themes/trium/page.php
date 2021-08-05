@@ -309,25 +309,23 @@
 				<div class="container">
 				  <div class="row">
 				  <div class="col-md-12">
-				    <div class="block-850">
-				      <div style="height:<?php echo $fc_gap; ?>px"<?php echo $hideclass; ?>></div>
-				    </div>
+				  	<div style="height:<?php echo $fc_gap; ?>px"<?php echo $hideclass; ?>></div>
 				  </div>
 				</div>
 				</div>
 				</div>
         <?php }elseif( get_row_layout() == 'horizontal_line' ){ ?>
-				<div class="block">
-					<div class="container">
-						<div class="row">
-						  <div class="col-md-12">
-								<div class="block-850">
-									<hr>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+	      <div class="block">
+	        <div class="dfp-text-module">
+	          <div class="container">
+	            <div class="row">
+	              <div class="col-md-12">
+	                <hr>
+	              </div>
+	            </div>
+	          </div>
+	        </div>
+	      </div>
     	<?php } ?>
     <?php endwhile; ?>
   </article>
