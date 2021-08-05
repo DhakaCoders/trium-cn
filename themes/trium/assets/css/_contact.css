@@ -471,9 +471,7 @@ body.woocommerce-edit-account .success-msg {
     margin-top: 0;
     text-transform: inherit;
 }
-.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .NameField.wpforms-has-error label.wpforms-error{
-    top: 53px;
-}
+
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container label.wpforms-error{
 	display: none;
 }
@@ -515,10 +513,7 @@ body.woocommerce-edit-account .success-msg {
     color: transparent !important;
 }
 
-.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .NameField.wpforms-has-error label.wpforms-error::after{
-    margin-top: -38px;
-    top: 0;
-}
+
 .contact-form-wrp div.wpforms-container-full .wpforms-form .wpforms-submit-container{
     padding: 0 !important;
 }
@@ -1070,6 +1065,7 @@ boek-je-form-sec-wrp
 	.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field.NameField {
 	    padding-top: 0;
 	    margin-top: -2px;
+        overflow:initial;
 	}
 	.contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field label{
 	    line-height: 1;
@@ -1099,6 +1095,13 @@ boek-je-form-sec-wrp
     }
     .contact-form-info-cntlr {
         padding: 53px 64px 50px 64px;
+    }
+    .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .NameField.wpforms-has-error label.wpforms-error{
+        top: 53px;
+    }
+    .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .NameField.wpforms-has-error label.wpforms-error::after{
+        margin-top: -38px;
+        top: 0;
     }
 }
 
