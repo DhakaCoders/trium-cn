@@ -174,7 +174,7 @@
 .home .service-sec{
 	margin-bottom: 0;
 }
-.home .referenties-detials-related-sec{
+.home .referenties-detials-related-sec.diensten-detials-related-sec{
 	padding-bottom: 60px;
 	padding-top: 90px;
 }
@@ -288,7 +288,7 @@
 	.home .referenties-detials-related-grd-item{
 		margin-bottom: 20px;
 	}
-	.home .referenties-detials-related-sec{
+	.home .referenties-detials-related-sec.diensten-detials-related-sec{
 		padding-bottom: 70px;
 	}
 	.blog-grid-item{
