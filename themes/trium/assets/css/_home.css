@@ -1,15 +1,17 @@
 .home-messege{
-    padding: 18px 0;
+    padding: 20px 0;
     background: #1A7ABE;
 }
 
 .home-messege-inr{
     text-align: center;
-    color: #2C113E;
+    color: #fff;
 }
 .home-messege-inr p{
     margin-bottom: 0;
     color:#fff;
+    font-family: 'Work Sans', sans-serif;
+    font-weight:500;
 }
 .home-messege-inr p strong{
     display: inline-block;
