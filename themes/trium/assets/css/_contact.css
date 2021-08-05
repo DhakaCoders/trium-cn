@@ -303,19 +303,16 @@ body.woocommerce-edit-account .success-msg {
     font-family: 'Oswald', sans-serif
 }
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-submit-container button:hover{
-	background: #000000 !important;
-	color: #fff !important;
-	border-color: #000000 !important;
-	transition: all 0.5s;
-	-ms-transition: all 0.5s;
-	-webkit-transition: all 0.5s;
+	background: transparent!important;
+	color: #1A7ABE!important;
+	border-color: #1A7ABE!important;
 }
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-description p{
     font-size: 13px;
     line-height: 1;
     color: #777F84;
     margin-bottom: 5px;
-    padding-top: 28px !important;
+    padding-top: 17px !important;
 }
 .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-description p a{
 	color: #777F84;
@@ -814,6 +811,9 @@ boek-je-form-sec-wrp
     .wpforms-container .wpforms-datepicker-wrap .wpforms-datepicker-clear{
         background-position: 50% 46%!important;    
     }    
+    .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-container .wpforms-field input{
+        font-size: 15px;
+    }
 }
 
 @media (max-width: 1499px) {
@@ -995,7 +995,7 @@ boek-je-form-sec-wrp
     .contact-form-wrp .wpforms-container .wpforms-form .wpforms-field-description p{
         line-height: 1.4 !important;
         margin-bottom: 0 !important;
-        padding-top:18px!important;
+        padding-top:15px!important;
     }
     .contact-form-info-cntlr {
         padding: 50px 35px 50px 35px;
