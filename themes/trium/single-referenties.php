@@ -232,15 +232,45 @@ $posttitle = get_the_title();
         <div style="height:<?php echo $fc_gap; ?>px"></div>
       </div>
       <?php }elseif( get_row_layout() == 'horizontal_line' ){ ?>
-      <div class="block-850">
-        <hr>
+      <div class="block">
+        <div class="dfp-text-module">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <hr>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <?php } ?>
     <?php endwhile; ?>
     <?php } ?>
+    <?php 
+      $cta = get_field('cta', 'options'); 
+      if($cta):
+    ?>
     <div class="block">
-    <?php get_template_part('templates/cta'); ?>
+      <div class="dfp-cta-module-cntlr">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="cta-module">
+                <?php 
+                  if( !empty($cta['titel']) ) printf('<h3 class="cta-module-title fl-h3">%s</h3>', $cta['titel']);
+                  if( !empty($cta['beschrijving']) ) echo wpautop( $cta['beschrijving'] );
+                  $knop = $cta['knop'];
+                  if( is_array( $knop ) &&  !empty( $knop['url'] ) ){
+                    printf('<div class="cta-module-btn"><a class="fl-transparent-btn" href="%s" target="%s">%s</a></div>', $knop['url'], $knop['target'], $knop['title']); 
+                  }
+                ?>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+    <?php endif; ?>
   </article>
 </section>
 

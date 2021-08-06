@@ -174,9 +174,16 @@
 .home .service-sec{
 	margin-bottom: 0;
 }
-.home .referenties-detials-related-sec{
+.home .referenties-detials-related-sec.diensten-detials-related-sec{
 	padding-bottom: 60px;
 	padding-top: 90px;
+}
+
+.home .service-sec-grid-item .service-sec-grid-item-title {
+    opacity: 1;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
 }
 
 /*responsive*/
@@ -288,7 +295,7 @@
 	.home .referenties-detials-related-grd-item{
 		margin-bottom: 20px;
 	}
-	.home .referenties-detials-related-sec{
+	.home .referenties-detials-related-sec.diensten-detials-related-sec{
 		padding-bottom: 70px;
 	}
 	.blog-grid-item{
