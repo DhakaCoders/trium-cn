@@ -104,8 +104,8 @@
 .fl-pagination-ctlr ul li a:hover{
 	color: #1A7ABE;
 }
-.fl-pagination-ctlr ul li.prev a:hover svg,
-.fl-pagination-ctlr ul li.next a:hover svg{
+.fl-pagination-ctlr ul li a.prev:hover svg,
+.fl-pagination-ctlr ul li a.next:hover svg{
 	fill: #162B39;
 }
 /* == pagination end design == */
