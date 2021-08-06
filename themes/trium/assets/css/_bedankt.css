@@ -47,7 +47,7 @@
 
 
 
-/*responsive-start*/
+
 
 
 @media(max-width: 1699px){
@@ -121,11 +121,6 @@
     
 }
 @media(max-width: 767px){
-    /*.bedankt-page-content-inner{
-        max-width: 375px;
-        width: 100%;
-        margin: 0 auto;
-    }*/
     .bedankt-sec {
         padding-top: 63px;
         padding-bottom: 53px;
@@ -143,9 +138,6 @@
     .bedankt-links {
         padding-bottom: 40px;
     }
-    /*.bedankt-btn a{
-        width: 100%;
-    }*/
     .bedankt-dec p {
         font-size: 16px;
         line-height: 1.6;
@@ -205,4 +197,4 @@
 }
 
 
-/*responsive-end*/
+
