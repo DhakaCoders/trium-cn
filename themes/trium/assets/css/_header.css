@@ -733,6 +733,7 @@ body.allWork {
 	    opacity: 1;
 	    box-shadow: none;
 	    display: none;
+	    background: transparent!important;
 
 	}
 	nav.main-nav > ul > li.menu-item-has-children ul.sub-menu li {
